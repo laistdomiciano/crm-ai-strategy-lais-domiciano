@@ -454,10 +454,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Hide scroll indicator after user scrolls */
-        .email-preview-wrapper:hover > div[style*="Scroll to see full email"] {
-            animation: fadeOut 0.3s ease forwards;
-        }
 
         @keyframes fadeOut {
             to {
@@ -712,22 +708,6 @@
                         box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
                         position: relative;
                     ">
-<!--                         <!-- Scroll Indicator -->
-                        <div style="
-                            position: absolute;
-                            bottom: 10px;
-                            right: 10px;
-                            background: rgba(0, 209, 106, 0.9);
-                            color: white;
-                            padding: 5px 10px;
-                            border-radius: 20px;
-                            font-size: 12px;
-                            font-weight: 600;
-                            z-index: 10;
-                            pointer-events: none;
-                            animation: pulse 2s infinite; -->
-                        ">
-                            ↓ Scroll to see full email
                         </div>
 
                         <div class="email-preview-container">
