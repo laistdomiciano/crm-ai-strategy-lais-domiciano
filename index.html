@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blinkist CRM Strategy - Laís Domiciano</title>
+    <title>Blinkist CRM Strategy - Part 2 | Laís Domiciano</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -242,6 +243,27 @@
             }
         }
 
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
         .flow-number {
             width: 50px;
             height: 50px;
@@ -292,6 +314,30 @@
             height: 600px;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .phone-mockup::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #333;
+            border-radius: 2px;
+        }
+
+        .phone-mockup::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            border: 2px solid #333;
+            border-radius: 50%;
         }
 
         .phone-screen {
@@ -350,8 +396,6 @@
             font-weight: 600;
             transition: all 0.3s ease;
             box-shadow: 0 4px 16px rgba(0, 209, 106, 0.3);
-            border: none; /* Add this to remove default button border */
-            cursor: pointer; /* Add cursor pointer for buttons */
         }
 
         .cta-button:hover {
@@ -372,129 +416,6 @@
         .success-box h4 {
             color: #007540;
             margin-bottom: 10px;
-        }
-
-        /* Specific email preview styles for rendering within the main page */
-        .email-preview-container {
-            background: #FFFFFF;
-            border: 1px solid #E5E5E5;
-            border-radius: 12px;
-            padding: 20px;
-            height: 500px; /* Adjust height for preview */
-            overflow-y: auto;
-            margin-top: 20px;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.05); /* Inner shadow to show it's a frame */
-        }
-
-        /* Styles copied from the email template for accurate preview */
-        .email-preview-container body, .email-preview-container table, .email-preview-container td, .email-preview-container a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-        .email-preview-container table, .email-preview-container td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-        .email-preview-container img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
-        .email-preview-container body { margin: 0; padding: 0; width: 100% !important; height: 100% !important; }
-        .email-preview-container body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            background-color: #f5f5f7;
-            color: #1a1a1a;
-            line-height: 1.6;
-        }
-        .email-preview-container .email-container { background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
-        .email-preview-container .text-primary { color: #1a1a1a; }
-        .email-preview-container .text-secondary { color: #666666; }
-        .email-preview-container .blinkist-dark-green-bg { background-color: #004D40; }
-        .email-preview-container .blinkist-light-cyan-text { color: #009999; }
-        .email-preview-container a { text-decoration: none; color: #009999; }
-        .email-preview-container .header-logo {
-            background-color: #004D40;
-            padding: 30px 40px 20px 40px;
-            text-align: center;
-        }
-        .email-preview-container .cta-button {
-            background-color: #58CC02;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 16px 40px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 18px;
-            display: inline-block;
-            box-shadow: 0 4px 14px 0 rgba(88,204,2,0.3);
-        }
-        .email-preview-container .cta-button:hover { background-color: #4CAF50; }
-        .email-preview-container .smart-segmentation-banner {
-            background: linear-gradient(135deg, #009999 0%, #004D40 100%);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        .email-preview-container .stat-number {
-            font-size: 32px;
-            font-weight: 700;
-            color: #009999;
-        }
-        .email-preview-container .card {
-            border: 1px solid #e5e5e5;
-            border-radius: 12px;
-            padding: 16px;
-            background-color: #fafafa;
-        }
-        .email-preview-container .book-details-info {
-            font-size: 12px;
-            color: #009999;
-            font-weight: 500;
-        }
-        .email-preview-container .value-prop-check {
-            color: #58CC02;
-            font-size: 18px;
-            margin-right: 8px;
-        }
-        .email-preview-container .gift-box-bg {
-            background-color: #E8F8F0;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-            text-align: center;
-        }
-        .email-preview-container .gift-box-text {
-            color: #58CC02;
-            font-weight: 600;
-            font-size: 18px;
-            margin: 0;
-        }
-        .email-preview-container .offer-section {
-            background-color: #F8F7FC;
-            padding: 25px;
-            border-radius: 10px;
-            margin-top: 25px;
-            border: 1px dashed #009999;
-            text-align: center;
-        }
-        .email-preview-container .offer-section h2.offer-title {
-            font-size: 24px;
-            color: #E24C78;
-            margin-bottom: 10px;
-        }
-        .email-preview-container .offer-section .discount-percentage {
-            font-size: 32px;
-            color: #E24C78;
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        .email-preview-container .offer-timer {
-            font-size: 16px;
-            font-weight: bold;
-            color: #E24C78;
-        }
-        /* Mobile responsive for the preview iframe (if needed, but outer mobile styles should largely handle this) */
-        @media screen and (max-width: 600px) {
-            .email-preview-container .email-container { width: 100% !important; border-radius: 0 !important; box-shadow: none !important; }
-            .email-preview-container .mobile-padding { padding: 20px !important; }
-            .email-preview-container .mobile-center { text-align: center !important; }
-            .email-preview-container .mobile-stack { display: block !important; width: 100% !important; }
-            .email-preview-container .mobile-hide { display: none !important; }
-            .email-preview-container .hero-title { font-size: 28px !important; line-height: 36px !important; }
-            .email-preview-container .stat-number { font-size: 24px !important; }
-            .email-preview-container .blink-image-mobile-stack { float: none !important; margin: 0 auto 15px auto !important; }
-            .email-preview-container .blink-details-mobile-center { text-align: center !important; }
         }
 
         /* Responsive */
@@ -522,10 +443,11 @@
     </style>
 </head>
 <body>
+    <!-- Navigation -->
     <nav>
         <div class="nav-content">
             <div>
-                <strong style="color: #00D46A;">●</strong> <strong> CRM Strategy</strong> | Laís Domiciano
+                <strong style="color: #00D46A;">●</strong> <strong>Part 2: CRM Strategy</strong> | Laís Domiciano
             </div>
             <div class="nav-dots">
                 <div class="nav-dot active" onclick="scrollToSection(0)"></div>
@@ -541,6 +463,7 @@
         </div>
     </nav>
 
+    <!-- Section 1: Problem Deep Dive -->
     <section class="visible" id="section-0">
         <div class="container">
             <h1>Let's Spark €2.1M Worth of<br><span class="gradient-text">Understanding & Growth</span></h1>
@@ -552,7 +475,7 @@
                 <span class="problem-badge">DISCOVERY #1</span>
                 <h3>Your "Special" Isn't Feeling Special</h3>
                 <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
-                    Here's what we discovered: When every offer is "special" at 40% off, none of them are.
+                    Here's what we discovered: When every offer is "special" at 40% off, none of them are. 
                     It's like calling every moment extraordinary - it loses its spark.
                 </p>
                 <p style="color: #00D46A; font-weight: 600;">
@@ -564,7 +487,7 @@
                 <span class="problem-badge">DISCOVERY #2</span>
                 <h3>We're Not Listening to Your "No, Thanks"</h3>
                 <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
-                    Imagine telling someone you're not into "Atomic Habits" and that's exactly what they hand you.
+                    Imagine telling someone you're not into "Atomic Habits" and that's exactly what they hand you. 
                     That's our current onboarding - and it's why 43% of users never finish their first Blink.
                 </p>
                 <p style="color: #00D46A; font-weight: 600;">
@@ -576,7 +499,7 @@
                 <span class="problem-badge">DISCOVERY #3</span>
                 <h3>Missing the Magic Moments</h3>
                 <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
-                    You just finished your Daily Blink. You're inspired. You want more... and we say nothing.
+                    You just finished your Daily Blink. You're inspired. You want more... and we say nothing. 
                     These peak moments are conversion gold, and we're letting them slip away.
                 </p>
                 <p style="color: #00D46A; font-weight: 600;">
@@ -586,6 +509,7 @@
         </div>
     </section>
 
+    <!-- Section 2: Strategic Solution -->
     <section id="section-1">
         <div class="container">
             <h2>Let's Build <span class="gradient-text">Journeys That Inspire</span></h2>
@@ -647,6 +571,7 @@
         </div>
     </section>
 
+    <!-- Section 3: Trigger Demo -->
     <section id="section-2">
         <div class="container">
             <h2>Experience the <span class="gradient-text">Spark Moments</span></h2>
@@ -684,6 +609,7 @@
         </div>
     </section>
 
+    <!-- Section 3.5: AI-Generated Assets Showcase -->
     <section id="section-3">
         <div class="container">
             <h2>AI Creates <span class="gradient-text">Conversion Magic</span></h2>
@@ -710,14 +636,20 @@
                     <div class="code-block" style="margin-top: 20px;">
                         <code style="font-size: 12px;">
                         <span class="code-comment">// SPARK Magic in Action ✨</span><br>
-                        <strong>S:</strong> Create a victory animation (4-sec loop)<br>
-                        <strong>P:</strong> You're Blinkist's joy designer!<br>
-                        <strong>A:</strong> ✓ transforms → 💡 expands → 📚 universe<br>
-                        <strong>R:</strong> Spark achievement + endless possibility
+                        <strong>S:</strong> 4-sec celebration loop, 400x300px, &lt;2MB<br>
+                        <strong>P:</strong> Senior Motion Designer creating micro-joy!<br>
+                        <strong>A:</strong> ✓→💡→📚 (success→spark→explore)<br>
+                        <strong>R:</strong> Each phase builds curiosity naturally<br>
+                        <strong>K:</strong> A/B test timing, personalize by streak
                         </code>
                     </div>
+                    </div>
+                    <button class="cta-button" style="margin-top: 15px; padding: 10px 20px; font-size: 14px; background: #009999;">
+                        View Full SPARK Prompt
+                    </button>
                 </div>
 
+            <!-- Email Template Preview -->
                 <div class="insight-card">
                     <h3>📧 Personalized Welcome Email</h3>
                     <p style="color: #666; margin-bottom: 20px;">Dynamic content based on user interests</p>
@@ -896,10 +828,11 @@
                 </div>
             </div>
 
+        <!-- Python Automation Script -->
             <div class="insight-card" style="margin-top: 40px;">
                 <h3>🤖 Your Personalization Co-Pilot</h3>
                 <p style="color: #666; margin-bottom: 20px;">Python magic that turns every signup into a personalized adventure</p>
-
+                
                 <div class="code-block">
                     <pre><code><span class="code-comment"># Blinkist Journey Transformer - Powered by SPARK™ 🚀</span>
 <span class="code-keyword">import</span> pandas <span class="code-keyword">as</span> pd
@@ -911,19 +844,19 @@
     that sparks understanding and drives growth
     """</span>
     engine = PersonalizationEngine(framework=<span class="code-string">'SPARK'</span>)
-
+    
     <span class="code-comment"># Match content to curiosity (not random picks!)</span>
     unlock = engine.generate_unlock(
         interests=user_data[<span class="code-string">'interests'</span>],
         avoid=user_data[<span class="code-string">'not_interested'</span>]  <span class="code-comment"># Respect their "no thanks"!</span>
     )
-
+    
     <span class="code-comment"># Find perfect moments for magic</span>
     triggers = engine.create_triggers(
         behavior=user_data[<span class="code-string">'engagement_pattern'</span>],
         peak_moments=[<span class="code-string">'daily_blink_victory'</span>, <span class="code-string">'guide_deep_dive'</span>]
     )
-
+    
     <span class="code-keyword">return</span> {
         <span class="code-string">'personalized_spark'</span>: unlock,
         <span class="code-string">'magic_moments'</span>: triggers,
@@ -943,6 +876,7 @@
         </div>
     </section>
 
+    <!-- Section 4: AI Implementation -->
     <section id="section-4">
         <div class="container">
             <h2>Where AI Meets <span class="gradient-text">Human Understanding</span></h2>
@@ -998,6 +932,7 @@
         </div>
     </section>
 
+    <!-- Section 5: Measurement Framework -->
     <section id="section-5">
         <div class="container">
             <h2>Measuring What <span class="gradient-text">Truly Matters</span></h2>
@@ -1049,6 +984,7 @@
         </div>
     </section>
 
+    <!-- Section 6: Implementation Roadmap -->
     <section id="section-6">
         <div class="container">
             <h2>Your 90-Day <span class="gradient-text">Transformation Journey</span></h2>
@@ -1078,183 +1014,196 @@
                             </ul>
                         </div>
                     </div>
+                    <p style="margin-top: 20px; color: #00D46A; font-weight: 600;">
+                        🚀 Impact: 45% more engaged users, 18% early conversion signals
+                    </p>
                 </div>
 
                 <div class="insight-card">
-                    <span class="solution-badge">MONTH 2: IGNITE</span>
-                    <h3>Fuel the Fire</h3>
+                    <span class="solution-badge">MONTH 2: GROW</span>
+                    <h3>Watch the Fire Spread</h3>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
                         <div>
-                            <h4 style="color: #007540; font-size: 18px;">Deep Dive</h4>
+                            <h4 style="color: #007540; font-size: 18px;">Expand the Experience</h4>
                             <ul style="list-style: none; margin-top: 10px; color: #4A4A4A;">
-                                <li>✓ Optimize timing for offers</li>
-                                <li>✓ Expand guide journey</li>
-                                <li>✓ A/B test discount tiers</li>
+                                <li>✓ Guide chapter unlocking</li>
+                                <li>✓ Multi-channel harmony</li>
+                                <li>✓ Segment journeys</li>
                             </ul>
                         </div>
                         <div>
-                            <h4 style="color: #007540; font-size: 18px;">Automate & Scale</h4>
+                            <h4 style="color: #007540; font-size: 18px;">Learn & Optimize</h4>
                             <ul style="list-style: none; margin-top: 10px; color: #4A4A4A;">
-                                <li>✓ Integrate full AI flow</li>
-                                <li>✓ Segment user behavior</li>
-                                <li>✓ Monitor real-time impact</li>
+                                <li>✓ Train ML on behaviors</li>
+                                <li>✓ Perfect offer timing</li>
+                                <li>✓ Refine recommendations</li>
                             </ul>
                         </div>
                     </div>
+                    <p style="margin-top: 20px; color: #00D46A; font-weight: 600;">
+                        🚀 Impact: 24% happy converters, CAC drops to €4.80
+                    </p>
                 </div>
 
                 <div class="insight-card">
-                    <span class="solution-badge">MONTH 3: TRANSFORM</span>
-                    <h3>Unleash Full Potential</h3>
+                    <span class="solution-badge">MONTH 3: THRIVE</span>
+                    <h3>Full Transformation Mode</h3>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
                         <div>
-                            <h4 style="color: #007540; font-size: 18px;">Refine & Perfect</h4>
+                            <h4 style="color: #007540; font-size: 18px;">Advanced Magic</h4>
                             <ul style="list-style: none; margin-top: 10px; color: #4A4A4A;">
-                                <li>✓ Custom segments for high-value users</li>
-                                <li>✓ Predictive churn models</li>
-                                <li>✓ Onboarding flow for returning users</li>
+                                <li>✓ Predict & prevent churn</li>
+                                <li>✓ Dynamic smart pricing</li>
+                                <li>✓ Seamless everywhere</li>
                             </ul>
                         </div>
                         <div>
-                            <h4 style="color: #007540; font-size: 18px;">Future-Proof</h4>
+                            <h4 style="color: #007540; font-size: 18px;">Never Stop Learning</h4>
                             <ul style="list-style: none; margin-top: 10px; color: #4A4A4A;">
-                                <li>✓ Continuous A/B testing</li>
-                                <li>✓ Expand into new channels</li>
-                                <li>✓ Document playbook</li>
+                                <li>✓ Weekly success stories</li>
+                                <li>✓ Prompt performance</li>
+                                <li>✓ User voice integration</li>
                             </ul>
                         </div>
                     </div>
+                    <p style="margin-top: 20px; color: #00D46A; font-weight: 600;">
+                        🚀 Impact: 31% conversion achieved, €2.1M annual growth unlocked
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
- <!-- Section 11: CTA -->
-    <section id="section-11" class="cta">
-  <div class="container" style="text-align: center;">
-    <h2>Let's Spark Understanding Together</h2>
-    <p style="font-size: 24px; color: #4A4A4A; margin-bottom: 40px;">
-      Ready to transform how 32 million users discover life-changing ideas and accelerate their growth?
-    </p>
-    <a href="#" class="cta-button">Explore Full Proposal</a>
+    <!-- Section 7: Next Steps -->
+    <section id="section-7">
+        <div class="container" style="text-align: center;">
+            <h2>Ready to <span class="gradient-text">Spark Understanding?</span></h2>
+            <p style="font-size: 24px; color: #666; margin-bottom: 60px;">
+                Let's transform how 32 million people discover life-changing ideas
+            </p>
 
-    <div style="margin-top: 80px; font-size: 18px; color: #666;">
-      <p><strong>Laís Domiciano</strong></p>
-      <p>CRM & AI Strategy</p>
-      <p style="margin-top: 20px; font-size: 14px;">Built with SPARK™ framework + AI assistance 🚀</p>
-    </div>
-  </div>
-</section>
+            <div class="metric-grid" style="margin-bottom: 60px;">
+                <div class="metric-card">
+                    <span class="metric-value">158%</span>
+                    <span class="metric-label">More Happy Members</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">20hrs</span>
+                    <span class="metric-label">Team Time Reclaimed</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">€2.1M</span>
+                    <span class="metric-label">Growth Unleashed</span>
+                </div>
+            </div>
+
+            <a href="#" class="cta-button">Let's Make This Happen Together</a>
+
+            <div style="margin-top: 80px; font-size: 18px; color: #666;">
+                <p><strong>Laís Domiciano</strong></p>
+                <p>Sparking CRM & AI Innovation</p>
+                <p style="margin-top: 20px; font-size: 14px;">
+                    Built with <span style="color: #00D46A;">💚</span> for empowerment, growth, and positive change
+                </p>
+            </div>
+        </div>
+    </section>
 
     <script>
-        // Smooth scrolling for navigation dots
+        // Timer
+        let seconds = 0;
+        const timer = document.getElementById('timer');
+        setInterval(() => {
+            seconds++;
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            timer.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+        }, 1000);
+
+        // Navigation
         function scrollToSection(index) {
-            const sections = document.querySelectorAll('section');
-            if (sections[index]) {
-                sections[index].scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
+            const section = document.getElementById(`section-${index}`);
+            section.scrollIntoView({ behavior: 'smooth' });
+            
+            document.querySelectorAll('.nav-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
         }
 
-        // Highlight active nav dot on scroll
-        const sections = document.querySelectorAll('section');
-        const navDots = document.querySelectorAll('.nav-dot');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach((section, index) => {
-                const sectionTop = section.offsetTop - 150; // Offset for fixed nav
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id');
-                    navDots.forEach(dot => dot.classList.remove('active'));
-                    navDots[index].classList.add('active');
-                }
-                // Animate sections into view
-                if (pageYOffset + window.innerHeight > section.offsetTop + 100) {
-                    section.classList.add('visible');
+        // Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    const sectionId = entry.target.id;
+                    const index = parseInt(sectionId.split('-')[1]);
+                    document.querySelectorAll('.nav-dot').forEach((dot, i) => {
+                        dot.classList.toggle('active', i === index);
+                    });
                 }
             });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
         });
 
-        // Timer functionality
-        let startTime = Date.now();
-        function updateTimer() {
-            const elapsedTime = Date.now() - startTime;
-            const minutes = Math.floor(elapsedTime / 60000);
-            const seconds = Math.floor((elapsedTime % 60000) / 1000);
-            document.getElementById('timer').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-        }
-        setInterval(updateTimer, 1000);
-
-
-        // Dynamic content for the phone mockup
-        function showTrigger(triggerType) {
+        // Trigger Demo
+        function showTrigger(type) {
             const screen = document.getElementById('triggerScreen');
-            let content = '';
+            const triggers = {
+                daily: {
+                    emoji: '🎉',
+                    title: 'You Did It!',
+                    content: 'That Daily Blink? Pure brilliance. Ready to keep the momentum going?',
+                    offer: 'Your Achievement Unlocked: 50% OFF for 48 hours',
+                    cta: 'Continue My Journey',
+                    color: '#00D46A'
+                },
+                guide: {
+                    emoji: '📚',
+                    title: 'Wow, Chapter 3!',
+                    content: 'You\'re really diving deep. Let\'s unlock the full guide + 500 more adventures!',
+                    offer: 'Deep Diver Special: 55% OFF (you earned it!)',
+                    cta: 'Unlock Everything',
+                    color: '#009999'
+                },
+                return: {
+                    emoji: '👋',
+                    title: 'Welcome Back!',
+                    content: 'Your brain missed you! We\'ve curated your perfect reading list.',
+                    offer: 'Welcome Back Gift: 45% OFF for loyal learners',
+                    cta: 'See What\'s Waiting',
+                    color: '#004D40'
+                },
+                streak: {
+                    emoji: '🔥',
+                    title: '5 Days Strong!',
+                    content: 'You\'re building something special here. Let\'s make it unstoppable.',
+                    offer: 'Habit Hero Exclusive: 60% OFF (our best ever!)',
+                    cta: 'Keep Growing',
+                    color: '#E24C78'
+                }
+            };
 
-            // Placeholder variables for the email preview
-            const firstName = 'Sarah';
-            const userInterest1 = 'Leadership';
-            const userInterest2 = 'Productivity';
-            const unlockedBookTitle = 'Dare to Lead';
-            const unlockedBookAuthor = 'Brené Brown';
-            const linkToUnlockedBlink = '#'; // Placeholder
-            const linkToOfferPage = '#'; // Placeholder
-
-
-            switch (triggerType) {
-                case 'daily':
-                    content = `
-                        <div style="text-align: center; margin-top: 50px;">
-                            <p style="font-size: 48px; margin-bottom: 10px;">🎉</p>
-                            <p style="font-size: 18px; font-weight: 600; color: #00D46A;">You just crushed your Daily Blink!</p>
-                            <p style="font-size: 14px; color: #666; margin-top: 15px;">Keep that growth going! Explore more insights tailored for you.</p>
-                            <button style="background: #00D46A; color: white; padding: 10px 20px; border: none; border-radius: 20px; margin-top: 20px; font-size: 14px; cursor: pointer;">Discover More</button>
-                        </div>
-                    `;
-                    break;
-                case 'guide':
-                    content = `
-                        <div style="text-align: center; margin-top: 50px;">
-                            <p style="font-size: 48px; margin-bottom: 10px;">📚</p>
-                            <p style="font-size: 18px; font-weight: 600; color: #009999;">Deep dive into "The 7 Habits..."!</p>
-                            <p style="font-size: 14px; color: #666; margin-top: 15px;">You've mastered Chapter 3. Ready for the full guide experience?</p>
-                            <button style="background: #009999; color: white; padding: 10px 20px; border: none; border-radius: 20px; margin-top: 20px; font-size: 14px; cursor: pointer;">Unlock Full Guide</button>
-                        </div>
-                    `;
-                    break;
-                case 'return':
-                    content = `
-                        <div style="text-align: center; margin-top: 50px;">
-                            <p style="font-size: 48px; margin-bottom: 10px;">👋</p>
-                            <p style="font-size: 18px; font-weight: 600; color: #004D40;">Welcome back, {{firstName}}!</p>
-                            <p style="font-size: 14px; color: #666; margin-top: 15px;">We missed you! Pick up where you left off or discover new Blinks.</p>
-                            <button style="background: #004D40; color: white; padding: 10px 20px; border: none; border-radius: 20px; margin-top: 20px; font-size: 14px; cursor: pointer;">Continue Learning</button>
-                        </div>
-                    `;
-                    break;
-                case 'streak':
-                    content = `
-                        <div style="text-align: center; margin-top: 50px;">
-                            <p style="font-size: 48px; margin-bottom: 10px;">🔥</p>
-                            <p style="font-size: 18px; font-weight: 600; color: #E24C78;">5-Day Streak! You're building a habit!</p>
-                            <p style="font-size: 14px; color: #666; margin-top: 15px;">Unlock unlimited growth with premium. Your dedication deserves a reward!</p>
-                            <button style="background: #E24C78; color: white; padding: 10px 20px; border: none; border-radius: 20px; margin-top: 20px; font-size: 14px; cursor: pointer;">Get Premium Now</button>
-                        </div>
-                    `;
-                    break;
-                default:
-                    content = '<p style="text-align: center; color: #999; margin-top: 200px;">Click any milestone to see the magic happen ✨</p>';
-            }
-            screen.innerHTML = content.replace(/{{firstName}}/g, firstName)
-                                    .replace(/{{userInterest1}}/g, userInterest1)
-                                    .replace(/{{userInterest2}}/g, userInterest2)
-                                    .replace(/{{unlockedBookTitle}}/g, unlockedBookTitle)
-                                    .replace(/{{unlockedBookAuthor}}/g, unlockedBookAuthor)
-                                    .replace(/{{linkToUnlockedBlink}}/g, linkToUnlockedBlink)
-                                    .replace(/{{linkToOfferPage}}/g, linkToOfferPage);
+            const trigger = triggers[type];
+            screen.innerHTML = `
+                <div style="text-align: center; padding: 40px 20px; animation: fadeIn 0.3s ease;">
+                    <p style="font-size: 64px; margin-bottom: 10px; animation: bounce 0.5s ease;">${trigger.emoji}</p>
+                    <h3 style="font-size: 28px; margin-bottom: 20px; color: #1A1A1A;">${trigger.title}</h3>
+                    <p style="font-size: 16px; color: #666; margin-bottom: 30px; line-height: 1.6;">
+                        ${trigger.content}
+                    </p>
+                    <div style="background: #E8F8F0; padding: 20px; border-radius: 12px; margin-bottom: 30px; border: 2px dashed ${trigger.color};">
+                        <p style="color: ${trigger.color}; font-weight: 600; font-size: 18px;">
+                            ${trigger.offer}
+                        </p>
+                    </div>
+                    <button style="background: ${trigger.color}; color: white; border: none; padding: 15px 40px; border-radius: 30px; font-size: 16px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                        ${trigger.cta}
+                    </button>
+                </div>
+            `;
         }
     </script>
 </body>
