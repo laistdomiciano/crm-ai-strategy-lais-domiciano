@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Blinkist - Your Personalized Learning Journey Starts Now!</title>
+    <title>Your Personalized Blinkist Journey Starts Now, {{firstName}}!</title>
     <style>
         /* Reset styles */
         body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
@@ -16,8 +16,8 @@
         /* Base styles */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            background-color: #f5f5f7; /* Light grey from second template */
-            color: #1a1a1a; /* Dark grey from second template */
+            background-color: #f5f5f7; /* Light grey */
+            color: #1a1a1a; /* Dark grey */
             line-height: 1.6;
         }
 
@@ -29,10 +29,12 @@
             .text-secondary { color: #b0b0b0 !important; }
             .card { background-color: #3a3a3a !important; border-color: #4a4a4a !important; }
             .cta-button { background-color: #58CC02 !important; } /* Dark mode green */
-            .blinkist-dark-green { background-color: #00362E !important; } /* Darker header for dark mode */
-            .blinkist-light-cyan { color: #4DB6AC !important; } /* Lighter cyan for dark mode links/accents */
+            .blinkist-dark-green-bg { background-color: #00362E !important; } /* Darker header for dark mode */
+            .blinkist-light-cyan-text { color: #4DB6AC !important; } /* Lighter cyan for dark mode links/accents */
+            .gift-box-bg { background-color: #2E5048 !important; color: #FFFFFF !important; } /* Darker gift box for dark mode */
+            .gift-box-text { color: #58CC02 !important; } /* Brighter green for gift text in dark mode */
             .offer-section { background-color: #3a3a3a !important; border-color: #4DB6AC !important; }
-            .offer-section h2, .offer-timer { color: #f29eb2 !important; } /* Brighter pink for offers in dark mode */
+            .offer-section h2.offer-title, .offer-section .discount-percentage, .offer-timer { color: #f29eb2 !important; } /* Brighter pink for offers in dark mode */
         }
 
         /* Mobile styles */
@@ -46,7 +48,6 @@
             .stat-number { font-size: 24px !important; }
             .blink-image-mobile-stack { float: none !important; margin: 0 auto 15px auto !important; }
             .blink-details-mobile-center { text-align: center !important; }
-            .button { font-size: 16px !important; padding: 12px 25px !important; }
         }
 
         /* Animation for email clients that support it */
@@ -54,28 +55,14 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        .animate-in {
-            animation: fadeIn 0.6s ease-out;
-        }
+        .animate-in { animation: fadeIn 0.6s ease-out; }
 
         /* Custom Blinkist Colors */
-        .blinkist-dark-green {
-            background-color: #004D40; /* From image/first template */
-        }
-        .blinkist-light-cyan {
-            color: #009999; /* From image/first template */
-        }
-        .blinkist-primary-green {
-            background-color: #58CC02; /* From image/first template */
-            color: #ffffff;
-        }
-        a {
-            text-decoration: none;
-            color: #009999; /* Default link color */
-        }
+        .blinkist-dark-green-bg { background-color: #004D40; }
+        .blinkist-light-cyan-text { color: #009999; }
+        a { text-decoration: none; color: #009999; } /* Default link color */
 
-        /* Specific styles for this email */
+        /* Specific section styles */
         .header-logo {
             background-color: #004D40; /* Blinkist Dark Blue/Green */
             padding: 30px 40px 20px 40px;
@@ -94,9 +81,7 @@
             box-shadow: 0 4px 14px 0 rgba(88,204,2,0.3); /* Shadow for green button */
             transition: background-color 0.3s ease;
         }
-        .cta-button:hover {
-            background-color: #4CAF50; /* Darker green on hover */
-        }
+        .cta-button:hover { background-color: #4CAF50; /* Darker green on hover */ }
 
         .smart-segmentation-banner {
             background: linear-gradient(135deg, #009999 0%, #004D40 100%); /* Blend of light cyan and dark green */
@@ -127,6 +112,21 @@
             margin-right: 8px;
         }
 
+        /* Welcome Gift/Unlocked Blink Specific Styles */
+        .gift-box-bg {
+            background-color: #E8F8F0; /* Light green from the new snippet */
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        .gift-box-text {
+            color: #58CC02; /* Blinkist Green */
+            font-weight: 600;
+            font-size: 18px;
+            margin: 0;
+        }
+
         /* Offer Section specific styles */
         .offer-section {
             background-color: #F8F7FC; /* Light background for offer */
@@ -134,6 +134,7 @@
             border-radius: 10px;
             margin-top: 25px;
             border: 1px dashed #009999; /* Dashed border using Light Blue/Cyan */
+            text-align: center;
         }
         .offer-section h2.offer-title {
             font-size: 24px;
@@ -156,7 +157,7 @@
 </head>
 <body>
     <div style="display: none; max-height: 0; overflow: hidden;">
-        🎯 Your personalized Blinkist journey starts now, {{firstName}}! Read or listen to key insights in 15 mins.
+        🎯 Your personalized Blinkist journey starts now, {{firstName}}! Get your unlocked gift & exclusive discount!
     </div>
 
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f5f7;">
@@ -167,17 +168,35 @@
 
                     <tr>
                         <td class="header-logo">
-                            <img src="https://placehold.co/120x40/004D40/FFFFFF?text=Blinkist" alt="Blinkist" width="120" style="display: block;">
+                            <img src="https://placehold.co/120x40/004D40/FFFFFF?text=Blinkist" alt="Blinkist Logo" width="120" style="display: block;">
                         </td>
                     </tr>
 
                     <tr>
-                        <td class="mobile-padding animate-in" style="padding: 0 40px 30px 40px;">
+                        <td class="mobile-padding animate-in" style="padding: 0 40px 30px 40px; text-align: center;">
                             <h1 class="hero-title text-primary" style="margin: 0; font-size: 36px; font-weight: 700; line-height: 44px; color: #1a1a1a;">
-                                Hi {{firstName}}, ready to read 50 books this year?
+                                Hi {{firstName}}, your growth journey starts now!
                             </h1>
                             <p class="text-secondary" style="margin: 16px 0 0 0; font-size: 18px; color: #666666;">
-                                Join 32 million people who transform their commute into a classroom
+                                We heard you loud and clear - **{{userInterest1}}** is your thing!
+                                To kick things off, we have a special welcome gift for you:
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 0 40px 30px 40px;">
+                            <div class="gift-box-bg">
+                                <p class="gift-box-text">🎁 Your Welcome Gift: "{{unlockedBookTitle}}" by {{unlockedBookAuthor}} - Completely Unlocked!</p>
+                            </div>
+                            <p style="margin: 15px 0 0 0; font-size: 16px; color: #333333; text-align: center;">
+                                Dive into this powerful summary and discover how fast you can grow!
+                            </p>
+                            <div style="text-align: center; margin-top: 20px;">
+                                <a href="{{linkToUnlockedBlink}}" class="cta-button">Read/Listen Now</a>
+                            </div>
+                            <p style="margin-top: 15px; font-size: 14px; color: #666666; text-align: center;">
+                                This is just a glimpse of the 7,500+ Blinks and Guides waiting for you.
                             </p>
                         </td>
                     </tr>
@@ -190,14 +209,14 @@
                                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                             <tr>
                                                 <td width="70%">
-                                                    <p style="margin: 0; font-size: 14px; opacity: 0.9;">Based on your interests in</p>
+                                                    <p style="margin: 0; font-size: 14px; opacity: 0.9;">More insights based on your interests in</p>
                                                     <p style="margin: 4px 0 0 0; font-size: 20px; font-weight: 600;">
                                                         {{userInterest1}} & {{userInterest2}}
                                                     </p>
                                                 </td>
                                                 <td width="30%" align="right" class="mobile-hide">
                                                     <div style="background: rgba(255,255,255,0.2); border-radius: 50%; width: 60px; height: 60px; display: inline-block; text-align: center; line-height: 60px;">
-                                                        <span style="font-size: 28px;">📚</span>
+                                                        <span style="font-size: 28px;">💡</span>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -231,81 +250,22 @@
 
                     <tr>
                         <td style="padding: 0 40px 30px 40px;">
-                            <h2 class="text-primary blinkist-light-cyan" style="margin: 0 0 20px 0; font-size: 24px; font-weight: 600;">
-                                🎉 Exclusive for You: Unleashed Insights! 🎉
-                            </h2>
-
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 16px;">
-                                <tr>
-                                    <td class="card" style="border: 1px solid #e5e5e5; border-radius: 12px; padding: 16px; background-color: #fafafa;">
-                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                            <tr>
-                                                <td width="80" valign="top" class="mobile-stack blink-image-mobile-stack">
-                                                    <img src="https://placehold.co/120x180/009999/FFFFFF?text=[Blink+Cover]" alt="[Suggested Blink Title] Cover" width="80" style="border-radius: 8px; display: block;">
-                                                </td>
-                                                <td style="padding-left: 16px;" class="blink-details-mobile-center">
-                                                    <h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #1a1a1a;">**{{recommendedBook1}}**</h3>
-                                                    <p style="margin: 4px 0 0 0; font-size: 14px; color: #666666;">By {{bookAuthor1}}</p>
-                                                    <p style="margin: 8px 0 0 0; font-size: 14px; color: #666666; line-height: 1.4;">
-                                                        <em>"[AI-generated short, captivating summary of the unlocked Blink, e.g., 'Discover actionable strategies to boost your productivity in just 15 minutes, cutting through the noise to get to what truly matters.']"</em>
-                                                    </p>
-                                                    <div style="text-align: left; margin-top: 15px;">
-                                                        <a href="{{ctaLink}}" class="cta-button" style="padding: 10px 20px; font-size: 16px;">Read/Listen Now</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <h2 class="text-primary blinkist-light-cyan" style="margin: 30px 0 20px 0; font-size: 24px; font-weight: 600;">
-                                More for {{firstName}}
-                            </h2>
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                <tr>
-                                    <td class="card" style="border: 1px solid #e5e5e5; border-radius: 12px; padding: 16px; background-color: #fafafa;">
-                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                            <tr>
-                                                <td width="80">
-                                                    <img src="https://placehold.co/70x70/009999/FFFFFF?text=Book" alt="Book cover" width="70" height="70" style="border-radius: 8px;">
-                                                </td>
-                                                <td style="padding-left: 16px;">
-                                                    <h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #1a1a1a;">{{recommendedBook2}}</h3>
-                                                    <p style="margin: 4px 0 0 0; font-size: 14px; color: #666666;">{{bookAuthor2}}</p>
-                                                    <p class="book-details-info" style="margin: 8px 0 0 0;">
-                                                        <span style="display: inline-block; margin-right: 12px;">⏱ 18 min</span>
-                                                        <span>🎧 Audio available</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding: 0 40px 30px 40px;">
                             <div class="offer-section">
-                                <h2 class="offer-title">✨ A Special Offer, Just for You! ✨</h2>
-                                <p style="font-size: 15px; color: #555555; margin-bottom: 15px;">Ready to unlock unlimited learning? Because you're a dedicated learner in **{{userInterest1}}**, we're offering you an exclusive:</p>
+                                <h2 class="offer-title">✨ Exclusive Offer: Unlock All Insights! ✨</h2>
+                                <p style="font-size: 15px; color: #555555; margin-bottom: 15px;">
+                                    Ready to access all 7,500+ Blinks and Guides, expertly curated for your growth?
+                                    Because you're a dedicated learner, we're offering you an exclusive:
+                                </p>
                                 <h2 class="discount-percentage">40% OFF Annual Premium!</h2>
-                                <p style="font-size: 15px; color: #555555; margin-bottom: 15px;">This truly special discount is available for the **next 48 hours only**.</p>
+                                <p style="font-size: 15px; color: #555566; margin-bottom: 15px;">This truly special discount is available for the **next 48 hours only**.</p>
                                 <p class="offer-timer">⏳ Your exclusive offer expires soon!</p>
                                 <div style="text-align: center; margin-top: 25px;">
-                                    <a href="[Link to personalized offer page]" class="cta-button">Unlock My Exclusive Discount</a>
+                                    <a href="{{linkToOfferPage}}" class="cta-button">Unlock My Exclusive Discount</a>
                                 </div>
+                                <p style="margin-top: 15px; font-size: 14px; color: #666666;">
+                                    No credit card required for initial trial • Cancel anytime
+                                </p>
                             </div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td align="center" style="padding: 10px 40px 40px 40px;">
-                             <p style="margin: 16px 0 0 0; font-size: 14px; color: #666666;">
-                                No credit card required • Cancel anytime
-                            </p>
                         </td>
                     </tr>
 
