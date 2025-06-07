@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personalized Blinkist Journey Starts Now! ✨</title>
+    <style>
+        /* Reset & Base Styles */
+        body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table, td, div { border-collapse: collapse; }
+        img { max-width: 100%; height: auto; display: block; border: 0; }
+        a { text-decoration: none; color: #009999; } /* Blinkist Light Blue/Cyan */
+        p { margin: 0; padding: 0; }
+
+        /* Main Container */
+        .email-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            color: #333333;
+            border-radius: 12px; /* Rounded corners */
+            overflow: hidden; /* Ensure rounded corners clip content */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Subtle shadow */
+        }
+
+        /* Header */
+        .header {
+            background-color: #004D40; /* Blinkist Dark Blue/Green */
+            padding: 20px 0;
+            text-align: center;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .header img {
+            width: 120px; /* Adjust logo size */
+            height: auto;
+            margin: 0 auto;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 30px;
+            text-align: center;
+        }
+        .content-section h1 {
+            font-size: 28px;
+            color: #4A4A4A;
+            margin-bottom: 20px;
+        }
+        .content-section p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Unlocked Blink/Guide Section */
+        .unlocked-blink-card {
+            background-color: #F8F7FC; /* Lightest purple/grey - keeping for subtle contrast */
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: left;
+            border: 1px solid #E6E6FA; /* Subtle border - keeping for contrast */
+        }
+        .unlocked-blink-card h2 {
+            font-size: 22px;
+            color: #009999; /* Blinkist Light Blue/Cyan */
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .blink-image {
+            width: 120px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            float: left; /* Image floats left */
+            margin-right: 20px;
+            margin-bottom: 10px; /* Adjust for wrap */
+        }
+        .blink-details h3 {
+            font-size: 18px;
+            color: #333333;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        .blink-details p {
+            font-size: 14px;
+            color: #666666;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .clear-float { clear: both; } /* Clear float after card content */
+
+
+        /* Call to Action Button */
+        .button-container {
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #58CC02; /* Blinkist Green */
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 30px; /* Pill-shaped button */
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #4CAF50; /* Darker green on hover */
+        }
+
+        /* Offer Section */
+        .offer-section {
+            background-color: #F8F7FC; /* Lightest grey - keeping for subtle contrast */
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 25px;
+            border: 1px dashed #009999; /* Dashed border for 'special' offer, using Light Blue/Cyan */
+        }
+        .offer-section h2 {
+            font-size: 24px;
+            color: #E24C78; /* Eye-catching pink/red for discount - keeping as it's a good contrast for an offer */
+            margin-bottom: 10px;
+        }
+        .offer-section p {
+            font-size: 15px;
+            color: #555555;
+            margin-bottom: 15px;
+        }
+        .offer-timer {
+            font-size: 16px;
+            font-weight: bold;
+            color: #E24C78; /* Keeping pink/red for timer */
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 12px;
+            color: #999999;
+            line-height: 1.5;
+        }
+        .footer a {
+            color: #999999;
+            text-decoration: underline;
+        }
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            margin: 0 8px;
+            display: inline-block;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 520px) {
+            .email-container {
+                width: 100% !important;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .content-section, .offer-section, .footer {
+                padding: 20px !important;
+            }
+            .content-section h1 {
+                font-size: 24px !important;
+            }
+            .unlocked-blink-card {
+                padding: 15px !important;
+            }
+            .blink-image {
+                float: none; /* Stack on small screens */
+                margin: 0 auto 15px auto;
+            }
+            .blink-details {
+                text-align: center;
+            }
+            .button {
+                font-size: 16px !important;
+                padding: 12px 25px !important;
+            }
+        }
+
+        /* Dark Mode Support (Basic) */
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #1a1a1a; }
+            .email-container {
+                background-color: #2b2b2b;
+                color: #e0e0e0;
+                box-shadow: 0 4px 15px rgba(255,255,255,0.08);
+            }
+            .content-section h1, .blink-details h3 { color: #f0f0f0; }
+            .content-section p, .blink-details p, .footer { color: #b0b0b0; }
+            .unlocked-blink-card, .offer-section { background-color: #3a3a3a; border-color: #505050; }
+            .header { background-color: #00362E; } /* Darker Dark Blue/Green for dark mode header */
+            a { color: #4DB6AC; } /* Lighter Light Blue/Cyan for links */
+            .offer-section h2, .offer-timer { color: #f29eb2; } /* Brighter pink for offers in dark mode */
+        }
+    </style>
+</head>
+<body>
+    <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <table class="email-container" role="presentation" cellspacing="0" cellpadding="0" width="100%">
+                    <tr>
+                        <td class="header">
+                            <img src="https://placehold.co/120x40/004D40/FFFFFF?text=Blinkist" alt="Blinkist Logo">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="content-section">
+                            <h1>Hi [User Name], Your Growth Journey in [Primary Interest] Starts Now!</h1>
+                            <p>We're thrilled to have you join Blinkist! We heard you're passionate about **[Primary Interest]**. To give you a taste of unlimited insights, we've specially unlocked a premium Blink for you:</p>
+
+                            <div class="unlocked-blink-card">
+                                <h2>🎉 Exclusive for You: Unleashed Insights! 🎉</h2>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img src="https://placehold.co/120x180/009999/FFFFFF?text=[Blink+Cover]" alt="[Suggested Blink Title] Cover" class="blink-image">
+                                        </td>
+                                        <td class="blink-details" valign="top">
+                                            <h3>**[Suggested Blink Title based on User Interest]**</h3>
+                                            <p>By [Author Name]</p>
+                                            <p>
+                                                <em>"[AI-generated short, captivating summary of the unlocked Blink,
