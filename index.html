@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blinkist CRM Strategy | Laís Domiciano</title>
+    <title>Blinkist CRM Strategy - Part 2 | Laís Domiciano</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -454,13 +454,6 @@
             scroll-behavior: smooth;
         }
 
-
-        @keyframes fadeOut {
-            to {
-                opacity: 0;
-            }
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .metric-grid {
@@ -490,7 +483,7 @@
     <nav>
         <div class="nav-content">
             <div>
-                <strong style="color: #00D46A;">●</strong> <strong>CRM Strategy</strong> | Laís Domiciano
+                <strong style="color: #00D46A;">●</strong> <strong>Part 2: CRM Strategy</strong> | Laís Domiciano
             </div>
             <div class="nav-dots">
                 <div class="nav-dot active" onclick="scrollToSection(0)"></div>
@@ -518,7 +511,7 @@
                 <span class="problem-badge">DISCOVERY #1</span>
                 <h3>Your "Special" Isn't Feeling Special</h3>
                 <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
-                    Here's what we discovered: When every offer is "special" at 40% off, none of them are.
+                    Here's what we discovered: When every offer is "special" at 40% off, none of them are. 
                     It's like calling every moment extraordinary - it loses its spark.
                 </p>
                 <p style="color: #00D46A; font-weight: 600;">
@@ -530,7 +523,7 @@
                 <span class="problem-badge">DISCOVERY #2</span>
                 <h3>We're Not Listening to Your "No, Thanks"</h3>
                 <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
-                    Imagine telling someone you're not into "Atomic Habits" and that's exactly what they hand you.
+                    Imagine telling someone you're not into "Atomic Habits" and that's exactly what they hand you. 
                     That's our current onboarding - and it's why 43% of users never finish their first Blink.
                 </p>
                 <p style="color: #00D46A; font-weight: 600;">
@@ -542,7 +535,7 @@
                 <span class="problem-badge">DISCOVERY #3</span>
                 <h3>Missing the Magic Moments</h3>
                 <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
-                    You just finished your Daily Blink. You're inspired. You want more... and we say nothing.
+                    You just finished your Daily Blink. You're inspired. You want more... and we say nothing. 
                     These peak moments are conversion gold, and we're letting them slip away.
                 </p>
                 <p style="color: #00D46A; font-weight: 600;">
@@ -708,7 +701,6 @@
                         box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
                         position: relative;
                     ">
-                        </div>
 
                         <div class="email-preview-container">
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f5f7;">
@@ -892,7 +884,7 @@
             <div class="insight-card" style="margin-top: 40px;">
                 <h3>🤖 Your Personalization Co-Pilot</h3>
                 <p style="color: #666; margin-bottom: 20px;">Python magic that turns every signup into a personalized adventure</p>
-
+                
                 <div class="code-block">
                     <pre><code><span class="code-comment"># Blinkist Journey Transformer - Powered by SPARK™ 🚀</span>
 <span class="code-keyword">import</span> pandas <span class="code-keyword">as</span> pd
@@ -904,19 +896,19 @@
     that sparks understanding and drives growth
     """</span>
     engine = PersonalizationEngine(framework=<span class="code-string">'SPARK'</span>)
-
+    
     <span class="code-comment"># Match content to curiosity (not random picks!)</span>
     unlock = engine.generate_unlock(
         interests=user_data[<span class="code-string">'interests'</span>],
         avoid=user_data[<span class="code-string">'not_interested'</span>]  <span class="code-comment"># Respect their "no thanks"!</span>
     )
-
+    
     <span class="code-comment"># Find perfect moments for magic</span>
     triggers = engine.create_triggers(
         behavior=user_data[<span class="code-string">'engagement_pattern'</span>],
         peak_moments=[<span class="code-string">'daily_blink_victory'</span>, <span class="code-string">'guide_deep_dive'</span>]
     )
-
+    
     <span class="code-keyword">return</span> {
         <span class="code-string">'personalized_spark'</span>: unlock,
         <span class="code-string">'magic_moments'</span>: triggers,
@@ -1184,7 +1176,7 @@
         function scrollToSection(index) {
             const section = document.getElementById(`section-${index}`);
             section.scrollIntoView({ behavior: 'smooth' });
-
+            
             document.querySelectorAll('.nav-dot').forEach((dot, i) => {
                 dot.classList.toggle('active', i === index);
             });
