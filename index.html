@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -418,6 +417,54 @@
             margin-bottom: 10px;
         }
 
+        /* Custom scrollbar for email preview */
+        .email-preview-wrapper::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .email-preview-wrapper::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .email-preview-wrapper::-webkit-scrollbar-thumb {
+            background: #00D46A;
+            border-radius: 10px;
+            opacity: 0.7;
+        }
+
+        .email-preview-wrapper::-webkit-scrollbar-thumb:hover {
+            background: #00C060;
+        }
+
+        /* Animation for scroll indicator */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.9;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+        }
+
+        /* Smooth scroll behavior */
+        .email-preview-wrapper {
+            scroll-behavior: smooth;
+        }
+
+        /* Hide scroll indicator after user scrolls */
+        .email-preview-wrapper:hover > div[style*="Scroll to see full email"] {
+            animation: fadeOut 0.3s ease forwards;
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+            }
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .metric-grid {
@@ -475,7 +522,7 @@
                 <span class="problem-badge">DISCOVERY #1</span>
                 <h3>Your "Special" Isn't Feeling Special</h3>
                 <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
-                    Here's what we discovered: When every offer is "special" at 40% off, none of them are. 
+                    Here's what we discovered: When every offer is "special" at 40% off, none of them are.
                     It's like calling every moment extraordinary - it loses its spark.
                 </p>
                 <p style="color: #00D46A; font-weight: 600;">
@@ -487,7 +534,7 @@
                 <span class="problem-badge">DISCOVERY #2</span>
                 <h3>We're Not Listening to Your "No, Thanks"</h3>
                 <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
-                    Imagine telling someone you're not into "Atomic Habits" and that's exactly what they hand you. 
+                    Imagine telling someone you're not into "Atomic Habits" and that's exactly what they hand you.
                     That's our current onboarding - and it's why 43% of users never finish their first Blink.
                 </p>
                 <p style="color: #00D46A; font-weight: 600;">
@@ -499,7 +546,7 @@
                 <span class="problem-badge">DISCOVERY #3</span>
                 <h3>Missing the Magic Moments</h3>
                 <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
-                    You just finished your Daily Blink. You're inspired. You want more... and we say nothing. 
+                    You just finished your Daily Blink. You're inspired. You want more... and we say nothing.
                     These peak moments are conversion gold, and we're letting them slip away.
                 </p>
                 <p style="color: #00D46A; font-weight: 600;">
@@ -618,6 +665,7 @@
             </p>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <!-- GIF Preview Card -->
                 <div class="insight-card">
                     <h3>🎬 In-App Celebration GIF</h3>
                     <p style="color: #666; margin-bottom: 20px;">Your Daily Blink victory moment</p>
@@ -643,184 +691,216 @@
                         <strong>K:</strong> A/B test timing, personalize by streak
                         </code>
                     </div>
-                    </div>
                     <button class="cta-button" style="margin-top: 15px; padding: 10px 20px; font-size: 14px; background: #009999;">
                         View Full SPARK Prompt
                     </button>
                 </div>
 
-            <!-- Email Template Preview -->
+                <!-- Email Template Preview -->
                 <div class="insight-card">
                     <h3>📧 Personalized Welcome Email</h3>
                     <p style="color: #666; margin-bottom: 20px;">Dynamic content based on user interests</p>
 
-                    <div class="email-preview-container">
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f5f7;">
-                            <tr>
-                                <td align="center" style="padding: 0;"> <table class="email-container" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.07);">
-
-                                        <tr>
-                                            <td class="header-logo">
-                                                <img src="https://placehold.co/120x40/004D40/FFFFFF?text=Blinkist" alt="Blinkist Logo" width="120" style="display: block;">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="mobile-padding animate-in" style="padding: 0 40px 30px 40px; text-align: center;">
-                                                <h1 class="hero-title text-primary" style="margin: 0; font-size: 36px; font-weight: 700; line-height: 44px; color: #1a1a1a;">
-                                                    Hi {{firstName}}, your growth journey starts now!
-                                                </h1>
-                                                <p class="text-secondary" style="margin: 16px 0 0 0; font-size: 18px; color: #666666;">
-                                                    We heard you loud and clear - **{{userInterest1}}** is your thing!
-                                                    To kick things off, we have a special welcome gift for you:
-                                                </p>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td style="padding: 0 40px 30px 40px;">
-                                                <div class="gift-box-bg">
-                                                    <p class="gift-box-text">🎁 Your Welcome Gift: "{{unlockedBookTitle}}" by {{unlockedBookAuthor}} - Completely Unlocked!</p>
-                                                </div>
-                                                <p style="margin: 15px 0 0 0; font-size: 16px; color: #333333; text-align: center;">
-                                                    Dive into this powerful summary and discover how fast you can grow!
-                                                </p>
-                                                <div style="text-align: center; margin-top: 20px;">
-                                                    <a href="{{linkToUnlockedBlink}}" class="cta-button">Read/Listen Now</a>
-                                                </div>
-                                                <p style="margin-top: 15px; font-size: 14px; color: #666666; text-align: center;">
-                                                    This is just a glimpse of the 7,500+ Blinks and Guides waiting for you.
-                                                </p>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td style="padding: 0 40px;">
-                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" class="smart-segmentation-banner">
-                                                    <tr>
-                                                        <td style="padding: 24px; color: #ffffff;">
-                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                                                <tr>
-                                                                    <td width="70%">
-                                                                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">More insights based on your interests in</p>
-                                                                        <p style="margin: 4px 0 0 0; font-size: 20px; font-weight: 600;">
-                                                                            {{userInterest1}} & {{userInterest2}}
-                                                                        </p>
-                                                                    </td>
-                                                                    <td width="30%" align="right" class="mobile-hide">
-                                                                        <div style="background: rgba(255,255,255,0.2); border-radius: 50%; width: 60px; height: 60px; display: inline-block; text-align: center; line-height: 60px;">
-                                                                            <span style="font-size: 28px;">💡</span>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td style="padding: 40px 40px 30px 40px;">
-                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                                    <tr>
-                                                        <td width="33%" align="center" class="mobile-stack" style="padding: 0 10px;">
-                                                            <div class="stat-number">73%</div>
-                                                            <div style="font-size: 14px; color: #666666; margin-top: 4px;">finish more books</div>
-                                                        </td>
-                                                        <td width="33%" align="center" class="mobile-stack" style="padding: 0 10px;">
-                                                            <div class="stat-number">15 min</div>
-                                                            <div style="font-size: 14px; color: #666666; margin-top: 4px;">average read time</div>
-                                                        </td>
-                                                        <td width="33%" align="center" class="mobile-stack" style="padding: 0 10px;">
-                                                            <div class="stat-number">4.6★</div>
-                                                            <div style="font-size: 14px; color: #666666; margin-top: 4px;">app store rating</div>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td style="padding: 0 40px 30px 40px;">
-                                                <div class="offer-section">
-                                                    <h2 class="offer-title">✨ Exclusive Offer: Unlock All Insights! ✨</h2>
-                                                    <p style="font-size: 15px; color: #555555; margin-bottom: 15px;">
-                                                        Ready to access all 7,500+ Blinks and Guides, expertly curated for your growth?
-                                                        Because you're a dedicated learner, we're offering you an exclusive:
-                                                    </p>
-                                                    <h2 class="discount-percentage">40% OFF Annual Premium!</h2>
-                                                    <p style="font-size: 15px; color: #555566; margin-bottom: 15px;">This truly special discount is available for the **next 48 hours only**.</p>
-                                                    <p class="offer-timer">⏳ Your exclusive offer expires soon!</p>
-                                                    <div style="text-align: center; margin-top: 25px;">
-                                                        <a href="{{linkToOfferPage}}" class="cta-button">Unlock My Exclusive Discount</a>
-                                                    </div>
-                                                    <p style="margin-top: 15px; font-size: 14px; color: #666666;">
-                                                        No credit card required for initial trial • Cancel anytime
-                                                    </p>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td style="background-color: #f8f9fa; padding: 30px 40px;">
-                                                <h3 style="margin: 0 0 16px 0; font-size: 20px; font-weight: 600; color: #1a1a1a; text-align: center;">
-                                                    Why professionals choose Blinkist
-                                                </h3>
-                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                                    <tr>
-                                                        <td style="padding: 8px 0;">
-                                                            <span class="value-prop-check">✓</span>
-                                                            <span style="color: #4b5563;">Read or listen anywhere - offline mode included</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="padding: 8px 0;">
-                                                            <span class="value-prop-check">✓</span>
-                                                            <span style="color: #4b5563;">New titles added daily from bestseller lists</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="padding: 8px 0;">
-                                                            <span class="value-prop-check">✓</span>
-                                                            <span style="color: #4b5563;">Sync progress across all your devices</span>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td style="padding: 30px 40px; text-align: center;">
-                                                <p style="margin: 0 0 16px 0; font-size: 14px; color: #666666;">
-                                                    Questions? We're here to help at <a href="mailto:support@blinkist.com" style="color: #009999;">support@blinkist.com</a>
-                                                </p>
-                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
-                                                    <tr>
-                                                        <td style="padding: 0 8px;">
-                                                            <a href="#" style="color: #666666; text-decoration: none; font-size: 14px;">About</a>
-                                                        </td>
-                                                        <td style="color: #666666;">•</td>
-                                                        <td style="padding: 0 8px;">
-                                                            <a href="#" style="color: #666666; text-decoration: none; font-size: 14px;">Privacy</a>
-                                                        </td>
-                                                        <td style="color: #666666;">•</td>
-                                                        <td style="padding: 0 8px;">
-                                                            <a href="#" style="color: #666666; text-decoration: none; font-size: 14px;">Unsubscribe</a>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                                <p style="margin: 16px 0 0 0; font-size: 12px; color: #999999;">
-                                                    &copy; 2025 Blinkist. Friedrichstraße 68, 10117 Berlin, Germany
-                                                </p>
-                                            </td>
-                                        </tr>
-
-                                    </table>
-                                    </td>
-                            </tr>
-                        </table>
+                    <!-- Scrollable Email Container -->
+                    <div class="email-preview-wrapper" style="
+                        height: 500px;
+                        overflow-y: auto;
+                        border: 2px solid #E5E5E5;
+                        border-radius: 12px;
+                        background: #f5f5f7;
+                        padding: 20px;
+                        box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+                        position: relative;
+                    ">
+                        <!-- Scroll Indicator -->
+                        <div style="
+                            position: absolute;
+                            bottom: 10px;
+                            right: 10px;
+                            background: rgba(0, 209, 106, 0.9);
+                            color: white;
+                            padding: 5px 10px;
+                            border-radius: 20px;
+                            font-size: 12px;
+                            font-weight: 600;
+                            z-index: 10;
+                            pointer-events: none;
+                            animation: pulse 2s infinite;
+                        ">
+                            ↓ Scroll to see full email
                         </div>
+
+                        <div class="email-preview-container">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f5f7;">
+                                <tr>
+                                    <td align="center" style="padding: 0;">
+                                        <table class="email-container" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width: 500px; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.07);">
+
+                                            <tr>
+                                                <td class="header-logo" style="padding: 20px; text-align: center; background: #004D40;">
+                                                    <img src="https://placehold.co/120x40/FFFFFF/FFFFFF?text=Blinkist" alt="Blinkist Logo" width="120" style="display: block; margin: 0 auto;">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="mobile-padding animate-in" style="padding: 30px 30px; text-align: center;">
+                                                    <h1 class="hero-title text-primary" style="margin: 0; font-size: 28px; font-weight: 700; line-height: 36px; color: #1a1a1a;">
+                                                        Hi {{firstName}}, your growth journey starts now!
+                                                    </h1>
+                                                    <p class="text-secondary" style="margin: 16px 0 0 0; font-size: 16px; color: #666666;">
+                                                        We heard you loud and clear - <strong>{{userInterest1}}</strong> is your thing!
+                                                        To kick things off, we have a special welcome gift for you:
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="padding: 0 30px 30px 30px;">
+                                                    <div style="background: linear-gradient(135deg, #E8F8F0 0%, #D1F2E0 100%); padding: 20px; border-radius: 12px; text-align: center; border: 2px dashed #00D46A;">
+                                                        <p style="margin: 0; font-size: 18px; font-weight: 600; color: #004D40;">🎁 Your Welcome Gift</p>
+                                                        <p style="margin: 10px 0 0 0; font-size: 16px; color: #007540;">"{{unlockedBookTitle}}"<br>by {{unlockedBookAuthor}}</p>
+                                                        <p style="margin: 5px 0 0 0; font-size: 14px; color: #00D46A; font-weight: 600;">Completely Unlocked!</p>
+                                                    </div>
+                                                    <p style="margin: 15px 0 0 0; font-size: 15px; color: #333333; text-align: center;">
+                                                        Dive into this powerful summary and discover how fast you can grow!
+                                                    </p>
+                                                    <div style="text-align: center; margin-top: 20px;">
+                                                        <a href="{{linkToUnlockedBlink}}" style="display: inline-block; padding: 12px 30px; background: #00D46A; color: white; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 16px;">Read/Listen Now</a>
+                                                    </div>
+                                                    <p style="margin-top: 15px; font-size: 13px; color: #666666; text-align: center;">
+                                                        This is just a glimpse of the 7,500+ Blinks and Guides waiting for you.
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="padding: 0 30px;">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background: linear-gradient(135deg, #004D40 0%, #007540 100%); border-radius: 12px; overflow: hidden;">
+                                                        <tr>
+                                                            <td style="padding: 20px; color: #ffffff;">
+                                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                    <tr>
+                                                                        <td width="70%">
+                                                                            <p style="margin: 0; font-size: 12px; opacity: 0.9;">More insights based on your interests in</p>
+                                                                            <p style="margin: 4px 0 0 0; font-size: 18px; font-weight: 600;">
+                                                                                {{userInterest1}} & {{userInterest2}}
+                                                                            </p>
+                                                                        </td>
+                                                                        <td width="30%" align="right">
+                                                                            <div style="background: rgba(255,255,255,0.2); border-radius: 50%; width: 50px; height: 50px; display: inline-block; text-align: center; line-height: 50px;">
+                                                                                <span style="font-size: 24px;">💡</span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="padding: 30px;">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                        <tr>
+                                                            <td width="33%" align="center" style="padding: 0 5px;">
+                                                                <div style="font-size: 24px; font-weight: 700; color: #00D46A;">73%</div>
+                                                                <div style="font-size: 12px; color: #666666; margin-top: 4px;">finish more books</div>
+                                                            </td>
+                                                            <td width="33%" align="center" style="padding: 0 5px;">
+                                                                <div style="font-size: 24px; font-weight: 700; color: #00D46A;">15 min</div>
+                                                                <div style="font-size: 12px; color: #666666; margin-top: 4px;">average read time</div>
+                                                            </td>
+                                                            <td width="33%" align="center" style="padding: 0 5px;">
+                                                                <div style="font-size: 24px; font-weight: 700; color: #00D46A;">4.6★</div>
+                                                                <div style="font-size: 12px; color: #666666; margin-top: 4px;">app store rating</div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="padding: 0 30px 30px 30px;">
+                                                    <div style="background: #FFF3E0; border: 2px solid #FFB74D; border-radius: 12px; padding: 20px; text-align: center;">
+                                                        <h2 style="margin: 0 0 10px 0; font-size: 20px; color: #E65100;">✨ Exclusive Offer: Unlock All Insights! ✨</h2>
+                                                        <p style="font-size: 14px; color: #555555; margin-bottom: 15px;">
+                                                            Ready to access all 7,500+ Blinks and Guides, expertly curated for your growth?
+                                                            Because you're a dedicated learner, we're offering you an exclusive:
+                                                        </p>
+                                                        <h2 style="margin: 15px 0; font-size: 32px; color: #E65100; font-weight: 800;">40% OFF Annual Premium!</h2>
+                                                        <p style="font-size: 14px; color: #666666; margin-bottom: 15px;">This truly special discount is available for the <strong>next 48 hours only</strong>.</p>
+                                                        <p style="font-size: 16px; color: #E65100; font-weight: 600; margin: 15px 0;">⏳ Your exclusive offer expires soon!</p>
+                                                        <div style="text-align: center; margin-top: 20px;">
+                                                            <a href="{{linkToOfferPage}}" style="display: inline-block; padding: 15px 40px; background: #FF6F00; color: white; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 16px; box-shadow: 0 4px 12px rgba(255, 111, 0, 0.3);">Unlock My Exclusive Discount</a>
+                                                        </div>
+                                                        <p style="margin-top: 15px; font-size: 12px; color: #666666;">
+                                                            No credit card required for initial trial • Cancel anytime
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="background-color: #f8f9fa; padding: 25px 30px;">
+                                                    <h3 style="margin: 0 0 16px 0; font-size: 18px; font-weight: 600; color: #1a1a1a; text-align: center;">
+                                                        Why professionals choose Blinkist
+                                                    </h3>
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                        <tr>
+                                                            <td style="padding: 8px 0;">
+                                                                <span style="color: #00D46A; font-weight: 600; margin-right: 8px;">✓</span>
+                                                                <span style="color: #4b5563; font-size: 14px;">Read or listen anywhere - offline mode included</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 8px 0;">
+                                                                <span style="color: #00D46A; font-weight: 600; margin-right: 8px;">✓</span>
+                                                                <span style="color: #4b5563; font-size: 14px;">New titles added daily from bestseller lists</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 8px 0;">
+                                                                <span style="color: #00D46A; font-weight: 600; margin-right: 8px;">✓</span>
+                                                                <span style="color: #4b5563; font-size: 14px;">Sync progress across all your devices</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="padding: 25px 30px; text-align: center; background: #004D40; color: white;">
+                                                    <p style="margin: 0 0 12px 0; font-size: 13px;">
+                                                        Questions? We're here to help at <a href="mailto:support@blinkist.com" style="color: #00D46A;">support@blinkist.com</a>
+                                                    </p>
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                        <tr>
+                                                            <td style="padding: 0 8px;">
+                                                                <a href="#" style="color: #ffffff; text-decoration: none; font-size: 12px; opacity: 0.8;">About</a>
+                                                            </td>
+                                                            <td style="color: #ffffff; opacity: 0.5;">•</td>
+                                                            <td style="padding: 0 8px;">
+                                                                <a href="#" style="color: #ffffff; text-decoration: none; font-size: 12px; opacity: 0.8;">Privacy</a>
+                                                            </td>
+                                                            <td style="color: #ffffff; opacity: 0.5;">•</td>
+                                                            <td style="padding: 0 8px;">
+                                                                <a href="#" style="color: #ffffff; text-decoration: none; font-size: 12px; opacity: 0.8;">Unsubscribe</a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <p style="margin: 12px 0 0 0; font-size: 11px; opacity: 0.7;">
+                                                        &copy; 2025 Blinkist. Friedrichstraße 68, 10117 Berlin, Germany
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
 
                     <a href="email.html" class="cta-button" style="margin-top: 20px; padding: 12px 30px; font-size: 16px;">
                         See Full Email Magic
@@ -828,11 +908,11 @@
                 </div>
             </div>
 
-        <!-- Python Automation Script -->
+            <!-- Python Automation Script -->
             <div class="insight-card" style="margin-top: 40px;">
                 <h3>🤖 Your Personalization Co-Pilot</h3>
                 <p style="color: #666; margin-bottom: 20px;">Python magic that turns every signup into a personalized adventure</p>
-                
+
                 <div class="code-block">
                     <pre><code><span class="code-comment"># Blinkist Journey Transformer - Powered by SPARK™ 🚀</span>
 <span class="code-keyword">import</span> pandas <span class="code-keyword">as</span> pd
@@ -844,19 +924,19 @@
     that sparks understanding and drives growth
     """</span>
     engine = PersonalizationEngine(framework=<span class="code-string">'SPARK'</span>)
-    
+
     <span class="code-comment"># Match content to curiosity (not random picks!)</span>
     unlock = engine.generate_unlock(
         interests=user_data[<span class="code-string">'interests'</span>],
         avoid=user_data[<span class="code-string">'not_interested'</span>]  <span class="code-comment"># Respect their "no thanks"!</span>
     )
-    
+
     <span class="code-comment"># Find perfect moments for magic</span>
     triggers = engine.create_triggers(
         behavior=user_data[<span class="code-string">'engagement_pattern'</span>],
         peak_moments=[<span class="code-string">'daily_blink_victory'</span>, <span class="code-string">'guide_deep_dive'</span>]
     )
-    
+
     <span class="code-keyword">return</span> {
         <span class="code-string">'personalized_spark'</span>: unlock,
         <span class="code-string">'magic_moments'</span>: triggers,
@@ -1124,7 +1204,7 @@
         function scrollToSection(index) {
             const section = document.getElementById(`section-${index}`);
             section.scrollIntoView({ behavior: 'smooth' });
-            
+
             document.querySelectorAll('.nav-dot').forEach((dot, i) => {
                 dot.classList.toggle('active', i === index);
             });
