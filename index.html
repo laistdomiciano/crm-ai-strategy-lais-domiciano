@@ -486,7 +486,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="nav-content">
             <div>
@@ -499,14 +498,11 @@
                 <div class="nav-dot" onclick="scrollToSection(3)"></div>
                 <div class="nav-dot" onclick="scrollToSection(4)"></div>
                 <div class="nav-dot" onclick="scrollToSection(5)"></div>
-                <div class="nav-dot" onclick="scrollToSection(6)"></div>
-                <div class="nav-dot" onclick="scrollToSection(7)"></div>
             </div>
             <div class="timer" id="timer">0:00</div>
         </div>
     </nav>
 
-    <!-- Section 1: Problem Deep Dive -->
     <section class="visible" id="section-0">
         <div class="container">
             <h1>Let's Spark <br><span class="gradient-text">Understanding & Growth</span></h1>
@@ -516,7 +512,7 @@
 
             <div class="insight-card">
                 <span class="problem-badge">DISCOVERY #1</span>
-                <h3>The Special Or Secret Isn't Feeling That Special</h3>
+                <h3>The "Special" Offer Isn't Feeling That Special</h3>
                 <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
                     When every offer is "special" or "secret offer" at 40% off, none of them are.
                     It's like calling every moment extraordinary - it loses its spark.
@@ -555,7 +551,6 @@
         </div>
     </section>
 
-    <!-- Section 2: Strategic Solution -->
     <section id="section-1">
         <div class="container">
             <h2>Let's Build <span class="gradient-text">Journeys That Inspire</span></h2>
@@ -596,12 +591,9 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </section>
 
-    <!-- Section 3: Trigger Demo -->
     <section id="section-2">
         <div class="container">
             <h2>Experience the <span class="gradient-text">Spark Moments</span></h2>
@@ -639,7 +631,6 @@
         </div>
     </section>
 
-    <!-- Section 3.5: AI-Generated Assets Showcase -->
     <section id="section-3">
         <div class="container">
             <h2>AI Creates <span class="gradient-text">Conversion Magic</span></h2>
@@ -648,20 +639,16 @@
             </p>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
-                <!-- GIF Preview Card -->
                 <div class="insight-card">
                     <h3>🎬 In-App Celebration GIF</h3>
                     <p style="color: #666; margin-bottom: 20px;">Your Daily Blink victory moment</p>
 
                     <div style="background: #F5F5F5; border-radius: 12px; padding: 20px; text-align: center; height: 300px; display: flex; align-items: center; justify-content: center;">
-                        <div>
-                            <p style="font-size: 48px; margin-bottom: 10px;">🎉</p>
-                            <p style="color: #999;">AI-Generated Victory Animation</p>
-                            <p style="font-size: 14px; color: #666; margin-top: 20px;">
-                                "You're on fire! Keep growing!"<br>
-                                Celebration → Curiosity → Action
-                            </p>
-                        </div>
+                        <img src="ai-gif-app.gif" alt="AI-Generated Victory Animation" style="max-width: 100%; max-height: 100%; border-radius: 8px;">
+                        <p style="font-size: 14px; color: #666; margin-top: 20px;">
+                            "You're on fire! Keep growing!"<br>
+                            Celebration → Curiosity → Action
+                        </p>
                     </div>
 
                     <div class="code-block" style="margin-top: 20px;">
@@ -680,13 +667,11 @@
                         </button>
                         </a>
                     </div>
-                
-                <!-- Email Template Preview -->
+
                 <div class="insight-card">
                     <h3>📧 Personalized Welcome Email</h3>
-                    <p style="color: #666; margin-bottom: 20px;">Dynamic content based on user interests</p>
+                    <p style="color: #666; margin-bottom: 20px;">Dynamic content based on user interests, redesigned for engagement</p>
 
-                    <!-- Scrollable Email Container -->
                     <div class="email-preview-wrapper" style="
                         height: 500px;
                         overflow-y: auto;
@@ -704,25 +689,23 @@
                                     <td align="center" style="padding: 0;">
                                         <table class="email-container" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width: 500px; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.07);">
 
-                                            <!-- Header with gradient -->
                                             <tr>
                                                 <td style="background: linear-gradient(135deg, #00D46A 0%, #00A050 100%); padding: 40px 30px; text-align: center;">
-                                                    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcontentpartners.blinkist.com%2Flogin&psig=AOvVaw2EsoIdX-4IieonekueZvIB&ust=1749454935678000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKjKudWp4Y0DFQAAAAAdAAAAABAE" alt="Blinkist" width="150" style="display: block; margin: 0 auto 20px;">
+                                                    <img src="https://contentpartners.blinkist.com/hubfs/logos/Blinkist_logo_white.png" alt="Blinkist" width="150" style="display: block; margin: 0 auto 20px;">
                                                     <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; line-height: 36px;">
-                                                        Welcome, {{firstName}}! 🎉
+                                                        Welcome, {{firstName}}! <br>Your Learning Journey Starts Now! 🎉
                                                     </h1>
                                                     <p style="margin: 10px 0 0; color: #ffffff; font-size: 16px; opacity: 0.9;">
-                                                        Your personalized growth journey starts now
+                                                        Ready to build your daily knowledge habit?
                                                     </p>
                                                 </td>
                                             </tr>
 
-                                            <!-- Personalized book unlock -->
                                             <tr>
                                                 <td class="mobile-padding animate-in" style="padding: 40px 30px 20px;">
-                                                    <div style="background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%); border-radius: 12px; padding: 30px; text-align: center; border: 2px solid #FFB74D;">
-                                                        <p style="margin: 0 0 10px; font-size: 14px; color: #E65100; font-weight: 600; text-transform: uppercase;">
-                                                            🎁 Your Welcome Gift
+                                                    <div style="background: linear-gradient(135deg, #E8F8F0 0%, #D4EFDF 100%); border-radius: 12px; padding: 30px; text-align: center; border: 2px solid #00D46A;">
+                                                        <p style="margin: 0 0 10px; font-size: 14px; color: #007540; font-weight: 600; text-transform: uppercase;">
+                                                            💡 Your First Insight Awaits!
                                                         </p>
                                                         <h2 style="margin: 0 0 15px; font-size: 24px; color: #1a1a1a; font-weight: 700;">
                                                             "{{recommendedBookTitle}}"
@@ -731,9 +714,9 @@
                                                             by {{recommendedBookAuthor}}
                                                         </p>
                                                         <p style="margin: 0 0 25px; font-size: 14px; color: #666666; line-height: 1.6;">
-                                                            Based on your interest in <strong>{{userInterest1}}</strong>, we've unlocked this powerful Blink just for you. No random picks here!
+                                                            Based on your interest in <strong>{{userInterest1}}</strong>, we've handpicked this powerful Blink just for you. Dive in and spark new ideas!
                                                         </p>
-                                                        <a href="{{deepLinkToBlink}}" style="display: inline-block; padding: 16px 40px; background: #FF6F00; color: #ffffff; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 16px; box-shadow: 0 4px 12px rgba(255, 111, 0, 0.3);">
+                                                        <a href="{{deepLinkToBlink}}" style="display: inline-block; padding: 16px 40px; background: #00D46A; color: #ffffff; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 16px; box-shadow: 0 4px 12px rgba(0, 212, 106, 0.3);">
                                                             Start Reading Now →
                                                         </a>
                                                         <p style="margin: 20px 0 0; font-size: 12px; color: #999999;">
@@ -743,7 +726,18 @@
                                                 </td>
                                             </tr>
 
-                                            <!-- Trust signals -->
+                                            <tr>
+                                                <td style="padding: 20px 30px; text-align: center;">
+                                                    <img src="ai-gif-email.gif" alt="Daily Learning Streak" style="max-width: 100px; margin-bottom: 10px;">
+                                                    <p style="font-size: 16px; color: #007540; font-weight: 600;">
+                                                        Keep Your Learning Streak Alive!
+                                                    </p>
+                                                    <p style="font-size: 14px; color: #666666; margin-top: 5px;">
+                                                        Every Blink brings you closer to your goals.
+                                                    </p>
+                                                </td>
+                                            </tr>
+
                                             <tr>
                                                 <td style="padding: 20px 30px;">
                                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -765,7 +759,6 @@
                                                 </td>
                                             </tr>
 
-                                            <!-- Smart recommendations -->
                                             <tr>
                                                 <td style="padding: 20px 30px;">
                                                     <div style="background-color: #f8f9fa; border-radius: 12px; padding: 25px;">
@@ -810,39 +803,36 @@
                                                 </td>
                                             </tr>
 
-                                            <!-- Exclusive offer - but actually exclusive -->
                                             <tr>
                                                 <td style="padding: 20px 30px 40px;">
                                                     <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border-radius: 12px; padding: 30px; text-align: center; position: relative; overflow: hidden;">
-                                                        <!-- Animated gradient border effect -->
                                                         <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #00D46A, #00F5FF, #00D46A); background-size: 200% 100%;"></div>
 
                                                         <p style="margin: 0 0 10px; font-size: 12px; color: #00D46A; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
-                                                            ⏰ 48-Hour Exclusive
+                                                            ⏰ Your Limited-Time Spark!
                                                         </p>
                                                         <h3 style="margin: 0 0 15px; font-size: 28px; color: #ffffff; font-weight: 700;">
-                                                            Your Special Welcome Offer
+                                                            Unlock Your Full Potential with 70% OFF!
                                                         </h3>
                                                         <p style="margin: 0 0 25px; font-size: 16px; color: #cccccc; line-height: 1.6;">
-                                                            Because you're ready to invest in yourself, here's something truly special:
+                                                            As a valued new learner, here's an exclusive offer to accelerate your growth:
                                                         </p>
                                                         <div style="font-size: 48px; font-weight: 800; color: #00D46A; margin: 20px 0;">
                                                             70% OFF
                                                         </div>
                                                         <p style="margin: 0 0 30px; font-size: 14px; color: #999999;">
-                                                            Premium Annual
+                                                            Premium Annual Membership
                                                         </p>
                                                         <a href="{{offerDeepLink}}" style="display: inline-block; padding: 18px 50px; background: #00D46A; color: #1a1a1a; text-decoration: none; border-radius: 30px; font-weight: 700; font-size: 16px; box-shadow: 0 4px 20px rgba(0, 212, 106, 0.4); transition: all 0.3s ease;">
-                                                            Claim Your Offer
+                                                            Claim Your Exclusive Offer
                                                         </a>
                                                         <p style="margin: 25px 0 0; font-size: 12px; color: #666666;">
-                                                            This offer expires in: <strong style="color: #00D46A;">{{countdownTimer}}</strong>
+                                                            This special offer expires in: <strong style="color: #00D46A;">{{countdownTimer}}</strong>
                                                         </p>
                                                     </div>
                                                 </td>
                                             </tr>
 
-                                            <!-- Social proof -->
                                             <tr>
                                                 <td style="background-color: #f8f9fa; padding: 30px;">
                                                     <p style="margin: 0 0 20px; font-size: 14px; color: #666666; text-align: center; font-style: italic;">
@@ -854,7 +844,6 @@
                                                 </td>
                                             </tr>
 
-                                            <!-- Footer -->
                                             <tr>
                                                 <td style="padding: 30px; text-align: center; border-top: 1px solid #eeeeee;">
                                                     <p style="margin: 0 0 15px; font-size: 14px; color: #666666;">
@@ -883,113 +872,10 @@
                     </a>
                 </div>
             </div>
-
-            <!-- Python Automation Script -->
-            <div class="insight-card" style="margin-top: 40px;">
-                <h3>🤖 Your Personalization Co-Pilot</h3>
-                <p style="color: #666; margin-bottom: 20px;">Python magic that turns every signup into a personalized adventure</p>
-
-                <div class="code-block">
-                    <pre><code><span class="code-comment"># Blinkist Journey Transformer - Powered by SPARK™ 🚀</span>
-<span class="code-keyword">import</span> pandas <span class="code-keyword">as</span> pd
-<span class="code-keyword">from</span> spark_ai <span class="code-keyword">import</span> PersonalizationEngine
-
-<span class="code-keyword">def</span> <span class="code-string">spark_understanding</span>(user_data):
-    <span class="code-string">"""
-    Transform every signup into a personalized journey
-    that sparks understanding and drives growth
-    """</span>
-    engine = PersonalizationEngine(framework=<span class="code-string">'SPARK'</span>)
-
-    <span class="code-comment"># Match content to curiosity (not random picks!)</span>
-    unlock = engine.generate_unlock(
-        interests=user_data[<span class="code-string">'interests'</span>],
-        avoid=user_data[<span class="code-string">'not_interested'</span>]  <span class="code-comment"># Respect their "no thanks"!</span>
-    )
-
-    <span class="code-comment"># Find perfect moments for magic</span>
-    triggers = engine.create_triggers(
-        behavior=user_data[<span class="code-string">'engagement_pattern'</span>],
-        peak_moments=[<span class="code-string">'daily_blink_victory'</span>, <span class="code-string">'guide_deep_dive'</span>]
-    )
-
-    <span class="code-keyword">return</span> {
-        <span class="code-string">'personalized_spark'</span>: unlock,
-        <span class="code-string">'magic_moments'</span>: triggers,
-        <span class="code-string">'conversion_potential'</span>: <span class="code-number">0.25</span>  <span class="code-comment"># Realistic goal!</span>
-    }</code></pre>
-                </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-                    <button class="cta-button" style="padding: 12px 30px; font-size: 16px;">
-                        Get the Magic Script
-                    </button>
-                    <button class="cta-button" style="padding: 12px 30px; font-size: 16px; background: #007540;">
-                        See How It Works
-                    </button>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Section 4: AI Implementation -->
     <section id="section-4">
-        <div class="container">
-            <h2>Where AI Meets <span class="gradient-text">Human Understanding</span></h2>
-            <p style="font-size: 20px; color: #666; margin-bottom: 40px;">
-                SPARK™ helps us create millions of personal journeys, not one generic path
-            </p>
-
-            <div class="code-block">
-                <pre><code><span class="code-comment">// Turning data into delightful journeys 💚</span>
-<span class="code-keyword">const</span> sparkPersonalization = <span class="code-keyword">async</span> (user) => {
-  <span class="code-comment">// S: Match content to curiosity</span>
-  <span class="code-keyword">const</span> perfectUnlock = <span class="code-keyword">await</span> AI.findTheirSpark({
-    role: <span class="code-string">'Chief Curiosity Officer'</span>,
-    interests: user.selectedTopics,
-    neverShow: user.saidNoTo, <span class="code-comment">// Bye bye, Atomic Habits!</span>
-    format: <span class="code-string">'one_amazing_blink'</span>
-  });
-
-  <span class="code-comment">// P: Create moments that matter</span>
-  <span class="code-keyword">const</span> magicOffer = <span class="code-keyword">await</span> AI.craftPerfectOffer({
-    role: <span class="code-string">'Conversion Happiness Expert'</span>,
-    userMoment: user.currentVibe,
-    peakEvent: user.justAchieved,
-    pastOffers: user.seenBefore
-  });
-
-  <span class="code-comment">// R: AI explains the magic formula</span>
-  <span class="code-keyword">return</span> {
-    content: perfectUnlock,
-    offer: magicOffer,
-    whyItWorks: magicOffer.sparkReasoning
-  };
-};</code></pre>
-            </div>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px;">
-                <div class="insight-card">
-                    <h4 style="color: #007540;">🎯 Smart Content Matching</h4>
-                    <p style="color: #4A4A4A;">AI learns what sparks your curiosity and unlocks exactly that - no more forced favorites!</p>
-                    <p style="margin-top: 15px; color: #666; font-size: 14px;">
-                        <strong>Real magic:</strong> Choose "Leadership" → Get "Dare to Lead" (not random picks!)
-                    </p>
-                </div>
-
-                <div class="insight-card">
-                    <h4 style="color: #007540;">⏰ Perfect Timing Engine</h4>
-                    <p style="color: #4A4A4A;">ML learns from behavioral patterns to find your perfect "yes" moment</p>
-                    <p style="margin-top: 15px; color: #666; font-size: 14px;">
-                        <strong>Result:</strong> Peak moment offers convert significantly better
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 5: Measurement Framework -->
-    <section id="section-5">
         <div class="container">
             <h2>Measuring What <span class="gradient-text">Truly Matters</span></h2>
             <p style="font-size: 20px; color: #666; margin-bottom: 40px;">
@@ -998,166 +884,166 @@
 
             <div class="metric-grid">
                 <div class="metric-card">
-                    <h4 style="color: #007540; margin-bottom: 20px;">Growth Metrics</h4>
+                    <h4 style="color: #007540; margin-bottom: 20px;">Conversion Metrics</h4>
                     <ul style="text-align: left; list-style: none; color: #4A4A4A;">
-                        <li style="margin-bottom: 12px;">🎯 New member conversion: 12% → 25%+</li>
-                        <li style="margin-bottom: 12px;">📖 First Blink completion: 60% → 80%</li>
-                        <li style="margin-bottom: 12px;">💚 Offer response rate: 8% → 20%</li>
-                        <li>💰 Smart spending: €8.50 → €3.20</li>
+                        <li style="margin-bottom: 12px;">🎯 Free-to-Paid Conversion Rate</li>
+                        <li style="margin-bottom: 12px;">📖 First Blink Completion Rate</li>
+                        <li style="margin-bottom: 12px;">💚 Offer Response Rate</li>
+                        <li>💰 Customer Acquisition Cost (CAC)</li>
                     </ul>
-                    <p class="metric-source">Targets based on industry benchmarks</p>
                 </div>
 
                 <div class="metric-card">
-                    <h4 style="color: #007540; margin-bottom: 20px;">Engagement Joy</h4>
+                    <h4 style="color: #007540; margin-bottom: 20px;">Engagement Metrics</h4>
                     <ul style="text-align: left; list-style: none; color: #4A4A4A;">
-                        <li style="margin-bottom: 12px;">🎁 Personal unlock clicks: 70%+</li>
-                        <li style="margin-bottom: 12px;">📚 Guide engagement: 40%+</li>
-                        <li style="margin-bottom: 12px;">🔔 In-app responses: 12%</li>
-                        <li>📧 Email engagement: 26%+</li>
+                        <li style="margin-bottom: 12px;">🎁 Personalized Unlock Click-Through Rate (CTR)</li>
+                        <li style="margin-bottom: 12px;">📚 Guide Engagement Rate</li>
+                        <li style="margin-bottom: 12px;">🔔 In-App Notification Response Rate</li>
+                        <li>📧 Email Open & Click-Through Rates</li>
                     </ul>
-                    <p class="metric-source">Based on BandLab & email benchmarks</p>
                 </div>
 
                 <div class="metric-card">
-                    <h4 style="color: #007540; margin-bottom: 20px;">Business Impact</h4>
+                    <h4 style="color: #007540; margin-bottom: 20px;">Retention & Value Metrics</h4>
                     <ul style="text-align: left; list-style: none; color: #4A4A4A;">
-                        <li style="margin-bottom: 12px;">📈 Member value: +35%</li>
-                        <li style="margin-bottom: 12px;">⚡ ROI ratio: 5:1</li>
-                        <li style="margin-bottom: 12px;">🔄 Retention boost: +20%</li>
-                        <li>🚀 Annual impact: €2.1M</li>
+                        <li style="margin-bottom: 12px;">📈 Customer Lifetime Value (CLTV)</li>
+                        <li style="margin-bottom: 12px;">🔄 Retention Rate (e.g., D7, D30)</li>
+                        <li style="margin-bottom: 12px;">📉 Churn Rate</li>
+                        <li>💜 Net Promoter Score (NPS)</li>
                     </ul>
-                    <p class="metric-source">Conservative projections</p>
                 </div>
             </div>
 
             <div class="success-box">
                 <h4>Smart Testing = Smart Growth</h4>
                 <p style="line-height: 1.8; color: #4A4A4A;">
-                    <strong>Week 1-2:</strong> Personal unlock vs. forced Atomic Habits (10K learners)<br>
-                    <strong>Week 3-4:</strong> Perfect timing tests (now vs. later magic)<br>
-                    <strong>Week 5-6:</strong> Finding your sweet spot (40% vs. 50% vs. dynamic)<br>
-                    <strong>Week 7-8:</strong> Launch the winning formula to everyone! 🎉
+                    <strong>A/B Testing:</strong> Continuously test personalized content and offers against generic approaches to identify winning strategies.<br>
+                    <strong>Segment Performance:</strong> Analyze metrics across different user segments to fine-tune personalization and targeting.<br>
+                    <strong>Behavioral Analytics:</strong> Dive deep into user behavior patterns to understand why certain campaigns perform better.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Section 6: Implementation Roadmap -->
-    <section id="section-6">
+    <section id="section-5">
         <div class="container">
-            <h2>Your 90-Day <span class="gradient-text">Transformation Journey</span></h2>
+            <h2>New Creative <span class="gradient-text">Growth Channels</span></h2>
             <p style="font-size: 20px; color: #666; margin-bottom: 40px;">
-                Small steps, big impact - just like a 15-minute Blink
+                Expanding our reach by connecting with learners where they are, naturally
             </p>
 
-            <div style="display: grid; gap: 30px;">
-                <div class="insight-card">
-                    <span class="solution-badge">MONTH 1: SPARK</span>
-                    <h3>Light the First Matches</h3>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-                        <div>
-                            <h4 style="color: #007540; font-size: 18px;">Build the Foundation</h4>
-                            <ul style="list-style: none; margin-top: 10px; color: #4A4A4A;">
-                                <li>✓ Set up smart tracking</li>
-                                <li>✓ Deploy SPARK™ prompts</li>
-                                <li>✓ Create unlock APIs</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 style="color: #007540; font-size: 18px;">Quick Wins</h4>
-                            <ul style="list-style: none; margin-top: 10px; color: #4A4A4A;">
-                                <li>✓ Fix "special" messaging</li>
-                                <li>✓ Launch Daily Blink magic</li>
-                                <li>✓ Test first personal unlock</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p style="margin-top: 20px; color: #00D46A; font-weight: 600;">
-                        🚀 Impact: 45% more engaged users, early conversion signals
-                    </p>
-                </div>
+            <div class="insight-card">
+                <span class="solution-badge">CHANNEL IDEA #1</span>
+                <h3>Podcast & Audio Integration</h3>
+                <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
+                    Many Blinkist users are already audio learners. By integrating with popular podcast platforms (e.g., Spotify, Apple Podcasts) beyond traditional ads, we can capture highly engaged audiences.
+                </p>
+                <p style="color: #00D46A; font-weight: 600;">
+                    💡 Why: Taps into existing audio consumption habits. How:
+                    * **Micro-Blinks as Podcast Intros/Outros**: Offer short, compelling "Blinks" (e.g., 60-second key insight from a popular book) as native content within relevant podcasts, with a direct CTA to the full Blink on our platform.
+                    * **Blinkist "Daily Insights" Podcast**: A dedicated podcast featuring one new Blink summary per day, promoting the app for full access and further exploration.
+                    * **Collaborations with Educational Podcasters**: Partner with hosts of learning-focused podcasts for co-created content or sponsored segments that feel organic.
+                </p>
+            </div>
 
-                <div class="insight-card">
-                    <span class="solution-badge">MONTH 2: GROW</span>
-                    <h3>Watch the Fire Spread</h3>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-                        <div>
-                            <h4 style="color: #007540; font-size: 18px;">Expand the Experience</h4>
-                            <ul style="list-style: none; margin-top: 10px; color: #4A4A4A;">
-                                <li>✓ Guide chapter unlocking</li>
-                                <li>✓ Multi-channel harmony</li>
-                                <li>✓ Segment journeys</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 style="color: #007540; font-size: 18px;">Learn & Optimize</h4>
-                            <ul style="list-style: none; margin-top: 10px; color: #4A4A4A;">
-                                <li>✓ Track user behaviors</li>
-                                <li>✓ Perfect offer timing</li>
-                                <li>✓ Refine recommendations</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p style="margin-top: 20px; color: #00D46A; font-weight: 600;">
-                        🚀 Impact: 20% converters achieved, CAC drops significantly
-                    </p>
-                </div>
+            <div class="insight-card">
+                <span class="solution-badge">CHANNEL IDEA #2</span>
+                <h3>Professional Development Platforms</h3>
+                <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
+                    Targeting professionals seeking continuous learning and skill development on platforms like LinkedIn Learning, Coursera, or even corporate L&D portals.
+                </p>
+                <p style="color: #00D46A; font-weight: 600;">
+                    💡 Why: High intent audience focused on self-improvement. How:
+                    * **LinkedIn Integration**: Offer "Blinkist Certificates" for completing Blinkist Guides, shareable on LinkedIn profiles. Promote relevant Blinks within LinkedIn articles and groups focused on professional growth.
+                    * **Webinar Series with Key Authors**: Host free webinars featuring authors summarized on Blinkist, offering exclusive access to their full Blinks as a lead magnet.
+                    * **Corporate Partnerships**: Offer corporate subscriptions or discounted access to companies for their employee development programs, positioning Blinkist as a tool for agile learning.
+                </p>
+            </div>
 
-                <div class="insight-card">
-                    <span class="solution-badge">MONTH 3: THRIVE</span>
-                    <h3>Full Transformation Mode</h3>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-                        <div>
-                            <h4 style="color: #007540; font-size: 18px;">Advanced Magic</h4>
-                            <ul style="list-style: none; margin-top: 10px; color: #4A4A4A;">
-                                <li>✓ Predict & prevent churn</li>
-                                <li>✓ Dynamic smart pricing</li>
-                                <li>✓ Seamless everywhere</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 style="color: #007540; font-size: 18px;">Never Stop Learning</h4>
-                            <ul style="list-style: none; margin-top: 10px; color: #4A4A4A;">
-                                <li>✓ Weekly success stories</li>
-                                <li>✓ Prompt performance</li>
-                                <li>✓ User voice integration</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p style="margin-top: 20px; color: #00D46A; font-weight: 600;">
-                        🚀 Impact: 25%+ conversion achieved, €2.1M annual growth unlocked
-                    </p>
-                </div>
+            <div class="insight-card">
+                <span class="solution-badge">CHANNEL IDEA #3</span>
+                <h3>Community-Driven Content & Challenges</h3>
+                <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
+                    Leveraging user-generated content and creating structured learning challenges to foster community and drive acquisition through word-of-mouth.
+                </p>
+                <p style="color: #00D46A; font-weight: 600;">
+                    💡 Why: Builds loyalty and authentic advocacy. How:
+                    * **"Blinkist Book Club" Challenges**: Facilitate themed reading challenges (e.g., "30 Days to Better Productivity" featuring relevant Blinks) with leaderboards and social sharing features.
+                    * **User-Generated "Insight Cards"**: Enable users to create and share visually appealing "insight cards" from Blinks on social media, acting as organic advertisements.
+                    * **Influencer & Micro-Community Partnerships**: Collaborate with individuals or small online communities (e.g., Goodreads groups, TikTok educators) who authentically integrate Blinkist into their content.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Section 7: Next Steps -->
+    <section id="section-6">
+        <div class="container">
+            <h2>Challenges & <span class="gradient-text">Smart Solutions</span></h2>
+            <p style="font-size: 20px; color: #666; margin-bottom: 40px;">
+                Anticipating hurdles and building agile pathways to success
+            </p>
+
+            <div class="insight-card">
+                <span class="problem-badge">CRM CHALLENGE #1</span>
+                <h3>Over-Personalization Fatigue</h3>
+                <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
+                    While personalization is key, too much can feel intrusive or overwhelming, leading to user fatigue or opt-outs.
+                </p>
+                <p style="color: #00D46A; font-weight: 600;">
+                    ✅ Solution: Intelligent Frequency Capping & Preference Center
+                    * **Dynamic Frequency Capping**: Implement an AI-driven system to learn optimal communication frequency per user segment, adjusting based on engagement and churn risk. (Blinkist Behavior: "Make tomorrow better than today")
+                    * **User Preference Center**: Empower users with a clear, easy-to-use preference center to control communication types, topics, and frequency. This builds trust and ensures relevance. (Blinkist Behavior: "Do it with heart")
+                </p>
+            </div>
+
+            <div class="insight-card">
+                <span class="problem-badge">CRM CHALLENGE #2</span>
+                <h3>Maintaining Brand Voice with AI</h3>
+                <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
+                    AI-generated content risks deviating from Blinkist's distinct, clear, and inspiring brand voice.
+                </p>
+                <p style="color: #00D46A; font-weight: 600;">
+                    ✅ Solution: Robust Brand Guidelines & Human-in-the-Loop QA
+                    * **Enhanced AI Brand Prompts**: Embed comprehensive brand guidelines, tone, and style examples directly into AI prompts (as seen in SPARK™) to guide content generation. (Blinkist Behavior: "Set the pace and energy")
+                    * **Human-in-the-Loop Quality Assurance**: Establish a dedicated human review process for a percentage of AI-generated content, especially for high-impact communications, to ensure brand consistency and quality. (Blinkist Behavior: "Make and own the call")
+                </p>
+            </div>
+
+            <div class="insight-card">
+                <span class="problem-badge">NEW CHANNEL CHALLENGE #1 (Podcast Integration)</span>
+                <h3>Measuring Direct Attribution for Audio</h3>
+                <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
+                    Attributing new signups directly to organic podcast mentions or micro-Blinks can be challenging without clear tracking.
+                </p>
+                <p style="color: #00D46A; font-weight: 600;">
+                    ✅ Solution: Dedicated Landing Pages & Unique Codes
+                    * **Unique Vanity URLs/Landing Pages**: Provide podcast listeners with specific, easy-to-remember URLs (e.g., blinkist.com/podcastname) or unique offer codes mentioned in the audio. (Blinkist Behavior: "Get it done")
+                    * **Post-Listen Surveys**: Implement short, in-app surveys for new users asking "How did you hear about us?" with specific podcast options to gather qualitative attribution data. (Blinkist Behavior: "Solve problems")
+                </p>
+            </div>
+
+            <div class="insight-card">
+                <span class="problem-badge">NEW CHANNEL CHALLENGE #2 (Professional Development)</span>
+                <h3>Securing Large-Scale Corporate Partnerships</h3>
+                <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px; color: #4A4A4A;">
+                    Breaking into large corporate learning and development budgets requires tailored proposals and navigating complex procurement processes.
+                </p>
+                <p style="color: #00D46A; font-weight: 600;">
+                    ✅ Solution: Pilot Programs & Value-Based Proposals
+                    * **Pilot Programs with Key Companies**: Offer small-scale, free pilot programs to select companies to demonstrate ROI and gather testimonials before proposing larger contracts. (Blinkist Behavior: "Lean into the uncomfortable")
+                    * **Tailored Business Cases**: Develop specific business cases highlighting how Blinkist directly addresses corporate learning objectives (e.g., leadership development, fostering innovation) with clear metrics. (Blinkist Behavior: "Be commercial")
+                </p>
+            </div>
+        </div>
+    </section>
+
+
     <section id="section-7">
         <div class="container" style="text-align: center;">
             <h2>Ready to <span class="gradient-text">Spark Understanding?</span></h2>
             <p style="font-size: 24px; color: #666; margin-bottom: 60px;">
                 Let's transform how 32 million people discover life-changing ideas
             </p>
-
-            <div class="metric-grid" style="margin-bottom: 60px;">
-                <div class="metric-card">
-                    <span class="metric-value">2x</span>
-                    <span class="metric-label">More Happy Members</span>
-                    <p class="metric-source">Conservative target</p>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-value">20hrs</span>
-                    <span class="metric-label">Team Time Reclaimed</span>
-                    <p class="metric-source">AI automation benefit</p>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-value">€2.1M</span>
-                    <span class="metric-label">Growth Unleashed</span>
-                    <p class="metric-source">Annual projection</p>
-                </div>
-            </div>
 
             <a href="#" class="cta-button">Let's Make This Happen Together</a>
 
