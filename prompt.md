@@ -8,7 +8,7 @@ A = Blue background, glowing yellow bulb, smooth motion, soft explosion.
 
 R = Book = knowledge, bulb = insight. Explosion = “aha!” moment.
 
-K = Try versions with stronger glow, bigger burst, or softer motion.
+K = A/B Test different versions.
 
 
 SPARK Framework PROMPT:
