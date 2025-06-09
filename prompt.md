@@ -1,5 +1,16 @@
 # Book-to-Lightbulb Transformation
 
+S = Looping GIF: Open book → lightbulb bursts out with glowing particles.
+
+P = You’re designing a celebration moment for a learning app.
+
+A = Blue background, glowing yellow bulb, smooth motion, soft explosion.
+
+R = Book = knowledge, bulb = insight. Explosion = “aha!” moment.
+
+K = Try versions with stronger glow, bigger burst, or softer motion.
+
+
 SPARK Framework PROMPT:
 
 S – Specify the task:
