@@ -1,29 +1,22 @@
 # Book-to-Lightbulb Transformation
 
-S = Looping GIF: Open book → lightbulb bursts out with glowing particles.
+## CRAT+E Framework PROMPT:
 
-P = You’re designing a celebration moment for a learning app.
+C - Context & Role: 
+You are a motion designer creating a celebratory animation for a learning app. The animation is shown when a user completes reading a summary—symbolizing knowledge turning into insight
 
-A = Blue background, glowing yellow bulb, smooth motion, soft explosion.
+R - Request: 
+Create a short looping GIF where an open book sits on a surface, and a glowing yellow lightbulb bursts upward from its center, with light particles and pages flying out in a soft explosion. Use a vertical format (300x400 or 512x512) with smooth animation
 
-R = Book = knowledge, bulb = insight. Explosion = “aha!” moment.
+A - Add Examples: 
+Use a cinematic, soft-glow style like the "attached example"
 
-K = A/B Test different versions.
+Good Output Example: A GIF with elegant light particles, with a gradient blue background. The foreground shows a realistic open book with a glowing yellow bulb bursting from its center. 
 
+Poor Output Example: A GIF with a harsh, bright background, because it is a Blinkist in-app asset.
 
-SPARK Framework PROMPT:
+T - Thinking Process: 
+The open book symbolizes accumulated knowledge; the lightbulb and particles represent the transformation into an "aha" insight. The explosion effect adds emotional reward and energy to the user experience. Explain how your design choices (colors, motion, particle effects) reinforce this symbolism and user experience
 
-S – Specify the task:
-Create a short looping GIF where an open book sits on a surface, and a glowing yellow lightbulb bursts upward from its center, with light particles and pages flying out in a soft explosion. Use a vertical format (300x400 or 512x512) with smooth animation.
-
-P – Provide perspective:
-You are a motion designer creating a celebratory animation for a learning app. The animation is shown when a user completes reading a summary—symbolizing knowledge turning into insight.
-
-A – Add examples:
-Use a cinematic, soft-glow style like the attached example. Background: gradient blue. Foreground: realistic book and glowing bulb with light bursts. Animation style: smooth, elegant explosion of particles and subtle movement.
-
-R – Reasoning required:
-The open book symbolizes accumulated knowledge; the lightbulb and particles represent the transformation into an “aha” insight. The explosion effect adds emotional reward and energy to the user experience.
-
-K – Keep improving:
-Generate variations with different explosion intensities, bulb glow strengths, and background colors to test which one feels most rewarding and aligned with the brand tone.
+E - Evolve & Improve: 
+Generated different variations & saw which one was the best.
