@@ -73,9 +73,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            /* Removed default opacity and transform */
+            transition: all 0.8s ease;
+        }
+
+        /* This class will be added by JS to trigger the entrance animation */
+        section:not(.initial-load) { /* Apply animation only after initial load, or if it's explicitly hidden and then made visible */
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.8s ease;
         }
 
         section.visible {
@@ -504,7 +509,7 @@
         </div>
     </nav>
 
-    <section class="visible" id="section-0">
+    <section class="initial-load" id="section-0">
         <div class="container">
             <h1>Let's Spark <br><span class="gradient-text">Understanding & Growth</span></h1>
             <p style="font-size: 24px; color: #666; margin-bottom: 60px;">
@@ -1070,16 +1075,23 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    // Remove 'initial-load' class once it's visible via observer
+                    entry.target.classList.remove('initial-load'); 
                     const sectionId = entry.target.id;
                     const index = parseInt(sectionId.split('-')[1]);
                     document.querySelectorAll('.nav-dot').forEach((dot, i) => {
                         dot.classList.toggle('active', i === index);
                     });
+                } else {
+                    // Optional: remove 'visible' class if you want sections to animate back out
+                    // entry.target.classList.remove('visible'); 
                 }
             });
         }, { threshold: 0.3 });
 
         document.querySelectorAll('section').forEach(section => {
+            // Add 'initial-load' class to all sections initially so they are visible by default
+            section.classList.add('initial-load'); 
             observer.observe(section);
         });
 
@@ -1107,7 +1119,7 @@
                     emoji: '👋',
                     title: '4-day Strike!',
                     content: 'We\'ve curated your perfect reading list.',
-                    offer: 'You're on Fire. Here's Gift: 50% OFF',
+                    offer: 'You\'re on Fire. Here\'s Gift: 50% OFF',
                     cta: 'See What\'s Waiting',
                     color: '#004D40'
                 },
